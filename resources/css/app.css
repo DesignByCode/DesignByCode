@@ -1,3 +1,128 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --scrollbar-track-color: theme('colors.gray.500');
+    --scrollbar-thumb-color: theme('colors.primary.500');
+    --scrollbar-thumb-border-width: 1px;
+    --scrollbar-thumb-border-color: theme('colors.primary.700');
+    ---scrollbar-width: 0.75rem;
+    ---scrollbar-height: 0.5rem;
+    --selection-background: theme('colors.primary.100');
+    --selection-color: theme('colors.primary.600');
+
+
+    --prism-bg: theme('colors.gray.50');
+    --prism-text-comment: theme('colors.gray.800');
+    --prism-namespace: theme('colors.rose.500');
+    --prism-function-name: theme('colors.blue.300');
+    --prism-function-num-bool: theme('colors.orange.500');
+    --prism-class-name-property: theme('colors.yellow.500');
+    --prism-selector-keywords: theme('colors.pink.500');
+    --prism-string-char-variable: theme('colors.indigo.300');
+    --prism-operator-entity-url: theme('colors.sky.400');
+    --prism-inserted: theme('colors.green.500');
+  }
+  @media (prefers-color-scheme: dark) {
+    :root  {
+      --prism-bg: theme('colors.gray.900');
+      --prism-text-comment: theme('colors.primary.300');
+    }
+  }
+
+
+
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: var(---scrollbar-width);
+    height: var(---scrollbar-height);
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: 0;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 0.75rem;
+    border: var(--scrollbar-thumb-border-width) solid var(--scrollbar-thumb-border-color);
+  }
+
+  *::selection {
+    background: var(--selection-background);
+    color: var(--selection-color)
+  }
+
+
+
+}
+
+
+@layer components {
+  .wrapper {
+    @apply w-full max-w-7xl px-4 md:px-6 lg:px-8 mx-auto;
+  }
+
+  .copy-button {
+    @apply pointer-events-auto bg-gray-950 text-primary-500 rounded px-2 py-1.5 border border-primary-500/50 absolute top-2 right-2 text-sm font-semibold;
+  }
+  .language-header {
+    @apply bg-primary-500 text-white px-4 py-0.5 rounded-t text-xs -top-5 -z-10 left-4 font-semibold isolation-auto absolute;
+  }
+
+  .heading-1 {
+    @apply text-5xl md:text-6xl lg:text-7xl text-gray-800 font-black dark:text-gray-200 tracking-tighter;
+  }
+
+  .heading-2 {
+    @apply text-4xl md:text-5xl lg:text-6xl text-gray-800 font-black dark:text-gray-200 tracking-tighter;
+  }
+
+  .nav-button {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .nav-button:hover::before,
+  .nav-button:hover::after,
+  .nav-button-active::before,
+  .nav-button-active::after
+  {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    border-radius: 100% 0 0 100%;
+    transform: translateX(-50%);
+    z-index: -10;
+
+  }
+  .nav-button::before {
+    height: 8px;
+    bottom: -10px;
+    filter: blur(10px);
+    background: theme('colors.primary.500');
+  }
+
+  .nav-button::after {
+    height: 5px;
+    bottom: -14px;
+    opacity: 0.75;
+    border-radius: 100% 0 0 100%;
+    background: linear-gradient(to right, transparent, theme('colors.white'), transparent);
+  }
+
+  [class*=tentacle] {
+    @apply saturate-[80%]	hue-rotate-0 contrast-[120%]	;
+  }
+
+}
