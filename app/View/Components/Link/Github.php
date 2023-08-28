@@ -11,7 +11,7 @@ class Github extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct(public string $url = "https://github.com/designbycode/")
     {
         //
     }
