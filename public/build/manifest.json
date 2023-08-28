@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-e1bedac0.css",
+    "file": "assets/app-f891a3fa.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -33,6 +33,18 @@
   "resources/img/profile/claude.webp": {
     "file": "assets/claude-feb66190.webp",
     "src": "resources/img/profile/claude.webp"
+  },
+  "resources/img/svg/postcss.svg": {
+    "file": "assets/postcss-84d2b74a.svg",
+    "src": "resources/img/svg/postcss.svg"
+  },
+  "resources/img/svg/tailwindcss.svg": {
+    "file": "assets/tailwindcss-7c29d970.svg",
+    "src": "resources/img/svg/tailwindcss.svg"
+  },
+  "resources/img/svg/webcomponents.svg": {
+    "file": "assets/webcomponents-722268d5.svg",
+    "src": "resources/img/svg/webcomponents.svg"
   },
   "resources/img/tentacles/t1.webp": {
     "file": "assets/t1-1afba57d.webp",

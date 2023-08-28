@@ -7,6 +7,7 @@ specifiers:
   '@designbycode/tailwindcss-text-shadow': ^2.0.0
   '@designbycode/tailwindcss-text-stroke': ^1.2.1
   '@designbycode/traverse': ^1.0.1
+  '@tailwindcss/container-queries': ^0.1.1
   '@tailwindcss/forms': ^0.5.2
   '@tailwindcss/typography': ^0.5.9
   '@types/prismjs': ^1.26.0
@@ -36,6 +37,7 @@ devDependencies:
   '@designbycode/tailwindcss-stripes': 1.0.5_tailwindcss@3.3.3
   '@designbycode/tailwindcss-text-shadow': 2.0.0_tailwindcss@3.3.3
   '@designbycode/tailwindcss-text-stroke': 1.2.1_tailwindcss@3.3.3
+  '@tailwindcss/container-queries': 0.1.1_tailwindcss@3.3.3
   '@tailwindcss/forms': 0.5.5_tailwindcss@3.3.3
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.3
   '@types/prismjs': 1.26.0
@@ -355,6 +357,14 @@ packages:
   /@popperjs/core/2.11.8:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
+
+  /@tailwindcss/container-queries/0.1.1_tailwindcss@3.3.3:
+    resolution: {integrity: sha512-p18dswChx6WnTSaJCSGx6lTmrGzNNvm2FtXmiO6AuA1V4U5REyoqwmT6kgAsIMdjo07QdAfYXHJ4hnMtfHzWgA==}
+    peerDependencies:
+      tailwindcss: '>=3.2.0'
+    dependencies:
+      tailwindcss: 3.3.3
+    dev: true
 
   /@tailwindcss/forms/0.5.5_tailwindcss@3.3.3:
     resolution: {integrity: sha512-03sXK1DcPt44GZ0Yg6AcAfQln89IKdbE79g2OwoKqBm1ukaadLO2AH3EiB3mXHeQnxa3tzm7eE0x7INXSjbuug==}
