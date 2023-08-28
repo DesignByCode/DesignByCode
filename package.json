@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@designbycode/traverse": "^1.0.1",
+        "gsap": "^3.12.2",
         "vanilla-headless": "^0.9.4"
     }
 }

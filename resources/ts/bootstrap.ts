@@ -5,7 +5,7 @@ import "./lib/copy-button"
 import Prism from 'prismjs';
 Prism.manual = true;
 Prism.highlightAll();
-
+import "./lib/gsap-stuff"
 
 
 // import axios from 'axios';

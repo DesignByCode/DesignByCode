@@ -8,12 +8,10 @@
                 </h2>
             </div>
             <div class="grid grid-cols-2 gap-6">
-                {{--                <img loading="lazy" class="tentacle-arm max-w-[500px] lg:max-w-full absolute -top-28 -right-24  z-10"  width="880" height="253" src="{{ Vite::asset('/resources/img/tentacles/t6.webp') }}" alt="tentacle 1">--}}
-
+                <img loading="lazy" class="tentacle-arm max-w-[500px] lg:max-w-full absolute -top-28 -right-24  z-10"  width="880" height="253" src="{{ Vite::asset('/resources/img/tentacles/t6.webp') }}" alt="tentacle 1">
                 @foreach($packages as $package)
                     <x-package-card :$package class="dark:border-primary-500"/>
                 @endforeach
-
             </div>
         </div>
     </div>
