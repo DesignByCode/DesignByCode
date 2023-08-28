@@ -1,5 +1,11 @@
 import "vanilla-headless"
 import "./lib/dark-mode"
+import "./lib/copy-button"
+import Prism from 'prismjs';
+Prism.manual = true;
+Prism.highlightAll();
+
+
 
 // import axios from 'axios';
 // window.axios = axios;

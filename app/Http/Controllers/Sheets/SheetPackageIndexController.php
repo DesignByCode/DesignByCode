@@ -1,21 +1,21 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Sheets;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Spatie\Sheets\Facades\Sheets;
 
-class HomePageController extends Controller
+class SheetPackageIndexController extends Controller
 {
     /**
      * Handle the incoming request.
      */
     public function __invoke(Request $request): View
     {
-        return view("home", [
-            'packages' => Sheets::collection('packages')->all()->shuffle()->take(4)
+        return view("packages.index", [
+            'packages' => Sheets::collection('packages')->all()->sortByDesc('date')
         ]);
     }
 }

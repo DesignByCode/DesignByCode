@@ -24,7 +24,8 @@ export default {
 
     plugins: [
         require("@designbycode/tailwindcss-mask-image"),
+        require("tailwindcss-attributes"),
         require('@tailwindcss/forms'),
-
+        require('@tailwindcss/typography'),
     ],
 };

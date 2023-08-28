@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get("/", \App\Http\Controllers\Frontend\HomePageController::class)->name("home");
+Route::get("/packages", \App\Http\Controllers\Sheets\SheetPackageIndexController::class)->name("packages.index");
+Route::get("/packages/{package}", \App\Http\Controllers\Sheets\SheetPackageShowController::class)->name("packages.show");
 
 
 Route::get('/dashboard', function () {

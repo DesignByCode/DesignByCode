@@ -12,17 +12,18 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/ts/app.ts'])
+    @vite(['resources/css/app.css', 'resources/css/prism.css', 'resources/ts/app.ts'])
 </head>
 <body class="font-sans text-gray-700 dark:text-gray-300 bg-primary-100 dark:bg-gray-950 antialiased overflow-x-clip">
 
 <x-navigation/>
-<x-pattern.grid @class(['h-[500px] mask-image-b'])/>
+<x-pattern.grid @class(['h-[500px] mask-image-b', 'opacity-20 h-[300px]' => !request()->is("/")])/>
+
 
 
 <main id="main" class="relative z-10">
     {{ $slot }}
 </main>
-
+<x-footer/>
 </body>
 </html>

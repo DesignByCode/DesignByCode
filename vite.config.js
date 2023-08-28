@@ -6,6 +6,7 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
+                'resources/css/prism.css',
                 'resources/ts/app.ts',
             ],
             refresh: true,
