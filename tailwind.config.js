@@ -5,6 +5,7 @@ import colors from "tailwindcss/colors.js";
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        "./storage/app/packages/*.{php,text,md}",
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
     ],
@@ -14,7 +15,9 @@ export default {
         extend: {
             colors: {
                 primary: colors.indigo,
-                gray: colors.slate
+                secondary: colors.cyan,
+                tri: colors.rose,
+                gray: colors.slate,
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
@@ -24,6 +27,9 @@ export default {
 
     plugins: [
         require("@designbycode/tailwindcss-mask-image"),
+        require("@designbycode/tailwindcss-conic-gradient"),
+        require("@designbycode/tailwindcss-stripes"),
+
         require("tailwindcss-attributes"),
         require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),

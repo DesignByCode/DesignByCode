@@ -3,8 +3,10 @@ lockfileVersion: 5.4
 specifiers:
   '@designbycode/tailwindcss-conic-gradient': ^1.0.3
   '@designbycode/tailwindcss-mask-image': ^2.0.3
+  '@designbycode/tailwindcss-stripes': ^1.0.5
   '@designbycode/tailwindcss-text-shadow': ^2.0.0
   '@designbycode/tailwindcss-text-stroke': ^1.2.1
+  '@designbycode/traverse': ^1.0.1
   '@tailwindcss/forms': ^0.5.2
   '@tailwindcss/typography': ^0.5.9
   '@types/prismjs': ^1.26.0
@@ -21,11 +23,13 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
+  '@designbycode/traverse': 1.0.1
   vanilla-headless: 0.9.4
 
 devDependencies:
   '@designbycode/tailwindcss-conic-gradient': 1.0.3_tailwindcss@3.3.3
   '@designbycode/tailwindcss-mask-image': 2.0.3_tailwindcss@3.3.3
+  '@designbycode/tailwindcss-stripes': 1.0.5_tailwindcss@3.3.3
   '@designbycode/tailwindcss-text-shadow': 2.0.0_tailwindcss@3.3.3
   '@designbycode/tailwindcss-text-stroke': 1.2.1_tailwindcss@3.3.3
   '@tailwindcss/forms': 0.5.5_tailwindcss@3.3.3
@@ -65,6 +69,14 @@ packages:
       tailwindcss: 3.3.3
     dev: true
 
+  /@designbycode/tailwindcss-stripes/1.0.5_tailwindcss@3.3.3:
+    resolution: {integrity: sha512-MXDe6ml+LelPRjnauXl4v7J3pPfRNyqB7msgRvdcRDau2rKEGXZ7/wIK16OEFqKtU93NiAvIzb8Va4/t5iXXcg==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.3.3
+    dev: true
+
   /@designbycode/tailwindcss-text-shadow/2.0.0_tailwindcss@3.3.3:
     resolution: {integrity: sha512-Dm2NZYXMjeyd0NeptuuG5SejLsTNY4YKovmUMSrqkAzn1eehqxfAvS9UsDgHTuOeT/rklXd/Rwg3axB+AyGV6g==}
     peerDependencies:
@@ -80,6 +92,10 @@ packages:
     dependencies:
       tailwindcss: 3.3.3
     dev: true
+
+  /@designbycode/traverse/1.0.1:
+    resolution: {integrity: sha512-rVKivQoXxN3c122pGewderjzeTCNkqPzNiz2MMX8NqiU+5KKxNjlIUvly2kdxYfPVmqf+sPx4VUHmwiGFHULkQ==}
+    dev: false
 
   /@esbuild/android-arm/0.18.20:
     resolution: {integrity: sha512-fyi7TDI/ijKKNZTUJAQqiG5T7YjJXgnzkURqmGj13C6dCqckZBLdl4h7bkhHt/t0WP+zO9/zwroDvANaOqO5Sw==}

@@ -1,4 +1,5 @@
 import "vanilla-headless"
+import "@designbycode/traverse"
 import "./lib/dark-mode"
 import "./lib/copy-button"
 import Prism from 'prismjs';

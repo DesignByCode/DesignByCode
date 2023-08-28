@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-baaf980d.css",
+    "file": "assets/app-b0e5d49c.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -9,8 +9,52 @@
     "isEntry": true,
     "src": "resources/css/prism.css"
   },
+  "resources/img/customers/CB.svg": {
+    "file": "assets/CB-f9ce5193.svg",
+    "src": "resources/img/customers/CB.svg"
+  },
+  "resources/img/customers/DBC.svg": {
+    "file": "assets/DBC-db32b72b.svg",
+    "src": "resources/img/customers/DBC.svg"
+  },
+  "resources/img/google-logo.svg": {
+    "file": "assets/google-logo-a33a47a2.svg",
+    "src": "resources/img/google-logo.svg"
+  },
+  "resources/img/octocat.webp": {
+    "file": "assets/octocat-a7246667.webp",
+    "src": "resources/img/octocat.webp"
+  },
+  "resources/img/profile/claude.webp": {
+    "file": "assets/claude-feb66190.webp",
+    "src": "resources/img/profile/claude.webp"
+  },
+  "resources/img/tentacles/t1.webp": {
+    "file": "assets/t1-1afba57d.webp",
+    "src": "resources/img/tentacles/t1.webp"
+  },
+  "resources/img/tentacles/t2.webp": {
+    "file": "assets/t2-f8574a9a.webp",
+    "src": "resources/img/tentacles/t2.webp"
+  },
+  "resources/img/tentacles/t3.webp": {
+    "file": "assets/t3-d4bacedb.webp",
+    "src": "resources/img/tentacles/t3.webp"
+  },
+  "resources/img/tentacles/t4.webp": {
+    "file": "assets/t4-6b2c5859.webp",
+    "src": "resources/img/tentacles/t4.webp"
+  },
+  "resources/img/tentacles/t5.webp": {
+    "file": "assets/t5-9934dc5e.webp",
+    "src": "resources/img/tentacles/t5.webp"
+  },
+  "resources/img/tentacles/t6.webp": {
+    "file": "assets/t6-6d58e8a6.webp",
+    "src": "resources/img/tentacles/t6.webp"
+  },
   "resources/ts/app.ts": {
-    "file": "assets/app-6fc58b7a.js",
+    "file": "assets/app-01752e06.js",
     "isEntry": true,
     "src": "resources/ts/app.ts"
   }
