@@ -6,12 +6,14 @@
                 <h2 class="heading-1 mb-6">
                     Author of several <span class="text-primary-500">Javascript</span> and <span class="text-primary-500">PHP</span> open source packages.
                 </h2>
+                
+
                 <a class="cta"
                    href="{{ route("packages.index") }}">View
                     all packages</a>
             </div>
             <div class="grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-6">
-                <img loading="lazy" class="tentacle-arm max-w-[500px] lg:max-w-full absolute -top-28 -right-24  z-10"  width="880" height="253" src="{{ Vite::asset('resources/img/tentacles/t6.webp') }}" alt="tentacle 6">
+                <img loading="lazy" class="tentacle-arm max-w-[500px] lg:max-w-full absolute -top-28 -right-24  z-10" width="880" height="253" src="{{ Vite::asset('resources/img/tentacles/t6.webp') }}" alt="tentacle 6">
                 @foreach($packages as $package)
                     <x-package-card :$package class="dark:border-primary-500"/>
                 @endforeach

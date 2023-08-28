@@ -1,8 +1,13 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-2bfd5e2b.css",
+    "file": "assets/app-0062d5ed.css",
     "isEntry": true,
     "src": "resources/css/app.css"
+  },
+  "resources/css/markdown.css": {
+    "file": "assets/markdown-6aaa23fd.css",
+    "isEntry": true,
+    "src": "resources/css/markdown.css"
   },
   "resources/css/prism.css": {
     "file": "assets/prism-9defb68f.css",

@@ -15,3 +15,16 @@
         </aside>
     </div>
 </x-main-layout>
+<script type="text/javascript">
+    var scrollToPermalink = function () {
+        var link = document.getElementById('user-content-' + window.location.hash);
+        if (link) {
+            link.scrollIntoView({behavior: 'smooth'});
+        }
+    };
+
+    window.addEventListener('hashchange', scrollToPermalink);
+    if (window.location.hash) {
+        scrollToPermalink();
+    }
+</script>
