@@ -3,11 +3,19 @@
 <head>
     @production
         <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer', "{{ config('apikeys.google.tagmanager') }}");</script>
+        <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', ' {{ config('apikeys.google.tagmanager') }}');</script>
         <!-- End Google Tag Manager -->
     @endproduction
 
@@ -29,17 +37,27 @@
     @vite(['resources/css/app.css', 'resources/css/prism.css', 'resources/ts/app.ts'])
 </head>
 <body class="font-sans text-gray-700 dark:text-gray-300 bg-primary-100 dark:bg-gray-950 antialiased overflow-x-clip">
-<!-- Google Tag Manager (noscript) -->
-@production
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id={{ config('apikeys.google.tagmanager') }}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-@endproduction
 
+<a class="bg-gray-200 text-gray-900 dark:text-gray-100 dark:bg-gray-950 border border-primary-500  focus:px-5 rounded-lg shadow-2xl text-sm font-semibold focus:outline-2 focus:outline-primary-500 focus:py-3 focus:fixed focus:z-[1000]
+top-5 left-5
+not-sr-only:block sr-only focus:not-sr-only"
+   href="#main">
+    Skip to main
+</a>
+
+@production
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ config('apikeys.google.tagmanager') }}"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+@endproduction
 <!-- End Google Tag Manager (noscript) -->
 <x-navigation/>
 <x-pattern.grid @class(['h-[500px] mask-image-b', 'opacity-10 h-[200px]' => !request()->is("/")])/>
 <main id="main" class="relative z-10">
+
     {{ $slot }}
 </main>
 <x-footer/>

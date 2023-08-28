@@ -1,22 +1,27 @@
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
-
 gsap.registerPlugin(ScrollTrigger)
+
 const tentacles =  document.querySelectorAll('.hero .tentacle')
+const tentaclesArm =  document.querySelectorAll('.tentacle-arm')
 
+if (tentaclesArm) {
+    tentaclesArm.forEach(arm => {
+        gsap.from(arm, {
+            x: "200%",
+            // duration: 2,
+            ease: "power4",
+            scrollTrigger: {
+                trigger: arm,
+                scrub: 4,
+                start: "top 80%",
+                end: "top 20%",
+                toggleActions: "play none none reverse",
+                markers: true}
+        })
+    })
+}
 
-gsap.from('.tentacle-arm', {
-  x: "200%",
-  // duration: 2,
-  ease: "power4",
-  scrollTrigger: {
-    trigger: '.tentacle-arm',
-    scrub: 4,
-    start: "top 80%",
-    end: "top 20%",
-    toggleActions: "play none none reverse",
-    markers: false}
-})
 
 
 if (tentacles.length) {
