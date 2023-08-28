@@ -14,17 +14,31 @@
             </div>
         </aside>
     </div>
-</x-main-layout>
-<script type="text/javascript">
-    var scrollToPermalink = function () {
-        var link = document.getElementById('user-content-' + window.location.hash);
-        if (link) {
-            link.scrollIntoView({behavior: 'smooth'});
-        }
-    };
 
-    window.addEventListener('hashchange', scrollToPermalink);
-    if (window.location.hash) {
-        scrollToPermalink();
+    <div id="topParent"></div>
+    <div id="bottomParent"></div>
+</x-main-layout>
+
+<script>
+    // Get all the section IDs with content-
+    const sectionIds = Array.from(document.querySelectorAll('[id^="content-"]')).map(section => section.id);
+
+    // Function to update the URL hash based on the section in view
+    function updateURLHash() {
+        for (const sectionId of sectionIds) {
+            const section = document.getElementById(sectionId);
+            const rect = section.getBoundingClientRect();
+
+            if (rect.top <= window.innerHeight / 4 && rect.bottom >= window.innerHeight / 4) {
+                history.replaceState(null, null, `#${sectionId}`);
+                break;
+            }
+
+            console.log(window.innerHeight / 4 + " | " + window.innerHeight / 2)
+        }
     }
+
+    // Attach event listener to scroll
+    window.addEventListener('scroll', updateURLHash);
+    updateURLHash(); // Update URL hash on initial load
 </script>

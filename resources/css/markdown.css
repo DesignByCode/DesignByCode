@@ -4,6 +4,17 @@
     margin-left: -20px;
     line-height: 1.4;
     text-decoration: none;
+    position: relative;
+}
+
+.heading-permalink::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 120px;
 }
 
 
@@ -19,3 +30,9 @@ h5:hover .heading-permalink,
 h6:hover .heading-permalink {
     visibility: visible;
 }
+
+
+/*[id^=content-] {*/
+/*    background-color: #00BB33;*/
+/*    offset-position: 10% 25%;*/
+/*}*/
