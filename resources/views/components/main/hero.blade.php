@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'w-full min-h-[760px] isolate relative hero flex items-center max-w-full overflow-clip']) }}>
+<div {{ $attributes->merge(['class' => 'w-full min-h-[520px] md:min-h-[689px] isolate relative hero flex items-center max-w-full overflow-clip']) }}>
     <div class="wrapper relative z-10 select-none">
         <div class="w-full max-w-2xl">
             <h1 class="heading-1">
