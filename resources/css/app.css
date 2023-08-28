@@ -121,6 +121,10 @@
     background: linear-gradient(to right, transparent, theme('colors.white'), transparent);
   }
 
+    .cta {
+        @apply px-6 py-3 font-semibold rounded-lg bg-gradient-to-b from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 border-y-2 border-primary-500 text-white tracking-wide inline-block text-shadow text-shadow-x-2 text-shadow-y-2 text-shadow-black/50 shadow-md shadow-black/30;
+    }
+
   [class*=tentacle] {
     @apply saturate-[80%] hue-rotate-0 contrast-[110%]	;
   }

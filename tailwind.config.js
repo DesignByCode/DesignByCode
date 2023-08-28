@@ -29,6 +29,7 @@ export default {
         require("@designbycode/tailwindcss-mask-image"),
         require("@designbycode/tailwindcss-conic-gradient"),
         require("@designbycode/tailwindcss-stripes"),
+        require("@designbycode/tailwindcss-text-shadow"),
 
         require("tailwindcss-attributes"),
         require('@tailwindcss/forms'),

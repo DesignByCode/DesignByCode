@@ -6,7 +6,11 @@
         </div>
         <aside class="col-span-6 md:col-span-2 relative">
             <div class="sticky top-32 space-y-6">
-                <x-link.github/>
+                @if($package->github)
+                    <x-link.github :url="$package->github"/>
+                @else
+                    <x-link.github/>
+                @endif
             </div>
         </aside>
     </div>
