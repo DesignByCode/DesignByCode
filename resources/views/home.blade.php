@@ -1,6 +1,7 @@
 <x-main-layout>
+    <x-pattern.grid @class(['h-[500px] mask-image-b'])/>
     <x-main.hero/>
-    
+
     <div class="w-full card bg-primary-50 border-y border-primary-500 dark:bg-gray-900 my-12 py-24 relative isolate overflow-x-clip">
         <div class="wrapper grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>

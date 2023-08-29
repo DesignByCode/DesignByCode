@@ -3,10 +3,11 @@ import "@designbycode/traverse"
 import "./lib/dark-mode"
 import "./lib/copy-button"
 import Prism from 'prismjs';
+import "./lib/gsap-stuff"
+import "./lib/swap-svg"
+
 Prism.manual = true;
 Prism.highlightAll();
-import "./lib/gsap-stuff"
-
 
 // import axios from 'axios';
 // window.axios = axios;

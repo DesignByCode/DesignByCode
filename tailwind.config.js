@@ -10,7 +10,7 @@ export default {
         './resources/views/**/*.blade.php',
     ],
     darkMode: "class",
-    safelist: ['.copy-button', '.language-header'],
+    safelist: ['.copy-button', '.language-header', '.fadeIn'],
     theme: {
         extend: {
             colors: {

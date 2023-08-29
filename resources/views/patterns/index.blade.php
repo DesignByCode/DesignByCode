@@ -1,19 +1,10 @@
 <x-main-layout>
-    <div class="w-full h-[500px] fixed top-0 inset-x-0 text-primary-500 z-0 mask-image-b opacity-30">
-        <svg width="100%" height="100%">
-            <defs>
-                <pattern id="dbc_svg_pattern_scales_1" patternUnits="userSpaceOnUse" width="50" height="50" y="-42" x="-2">
-                    <rect transform="skewX(28)" x="-22" y="-1" rx="10" width="50" height="50" stroke-width="1.5" stroke="currentColor" fill="none"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#dbc_svg_pattern_scales_1)"/>
-        </svg>
-    </div>
+    <x-pattern.grid @class(['h-[500px] mask-image-b'])/>
     <div class="wrapper my-24 relative z-10">
         <h1 class="heading-1 mb-12">
             SVG Patterns
         </h1>
-        <div class="grid md:grid-cols-2 gap-x-6 gap-y-12">
+        <div class="grid md:grid-cols-2 gap-x-6 gap-y-12 ">
             @foreach($patterns as $pattern)
                 <div>
                     <div class="relative bg-white dark:bg-gray-900 rounded-lg border-2 border-primary-500 aspect-video text-primary-500">
@@ -31,6 +22,7 @@
             @endforeach
         </div>
     </div>
+
 </x-main-layout>
 
 

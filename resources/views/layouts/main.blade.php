@@ -55,7 +55,7 @@ not-sr-only:block sr-only focus:not-sr-only"
 @endproduction
 <!-- End Google Tag Manager (noscript) -->
 <x-navigation/>
-<x-pattern.grid @class(['h-[500px] mask-image-b', 'opacity-10 h-[200px]' => !request()->is("/")])/>
+
 <main id="main" class="relative z-10">
     {{ $slot }}
 </main>
