@@ -134,8 +134,13 @@
         @apply flex items-center p-6 my-6 z-20 rounded-lg bg-primary-50 dark:bg-gray-900 border-2 border-primary-500 shadow-lg shadow-primary-500/20 relative;
     }
 
-    .markdown-example .label {
+    .markdown-example .label,
+    .card-label {
         @apply absolute bg-primary-500 px-3 text-white text-shadow top-0 translate-x-4 left-0 text-sm font-semibold -translate-y-1/2  rounded-full;
+    }
+
+    .card-label {
+        @apply px-4 py-1.5 text-base border-2 border-primary-100 dark:border-gray-950;
     }
 
 }

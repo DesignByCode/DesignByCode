@@ -15,10 +15,9 @@
                                     @class(["pl-4 pr-2 py-2 dark:text-shadow-sm nav-button flex items-center", 'nav-button-active' => request()->is($link->active)]) >
                                     <span class="relative z-10">{{ $link->name }} </span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"/>
                                     </svg>
                                 </button>
-
                                 <div hidden class="absolute bg-gradient-to-br from-primary-100 dark:from-primary-300 to-primary-50 dark:to-primary-100  rounded-lg w-[260px] border-2 border-primary-500 shadow-xl shadow-primary-500/10"
                                      aria-labelledby="menu-button-{{ $loop->index }}"
                                      aria-orientation="vertical"
@@ -38,7 +37,6 @@
                                         </a>
                                     @endforeach
                                 </div>
-
                             </headless-dropdown>
                         @else
                             <a @class(["px-4 py-2 dark:text-shadow-sm nav-button",

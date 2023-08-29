@@ -1,10 +1,10 @@
-<div {{ $attributes->merge(['class' => 'w-full min-h-[520px] md:min-h-[689px] isolate relative hero flex items-center max-w-full overflow-clip']) }}>
+<div {{ $attributes->merge(['class' => 'w-full min-h-screen isolate relative hero flex items-center max-w-full overflow-clip']) }}>
     <div class="wrapper relative z-10 select-none">
         <div class="w-full max-w-2xl">
             <h1 class="heading-1">
                 Hi, I am <br/> <span class="text-primary-500">Claude Myburgh.</span><br/> Web Artisan and Developer.
             </h1>
-            <p class="text-2xl my-3 font-semibold tracking-wider leading-loose">I ❤️ building sublime websites for people like you.</p>
+            <p class="text-xl my-3 font-semibold  leading-loose">I ❤️ building sublime websites for people like you.</p>
         </div>
     </div>
     <div class="absolute w-full inset-y-0 md:w-1/2 min-h-screen top-0 -right-20 ">

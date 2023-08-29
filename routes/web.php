@@ -1,6 +1,7 @@
 <?php
 
     use App\Http\Controllers\Frontend\HomePageController;
+    use App\Http\Controllers\Patterns\PatternsIndexController;
     use App\Http\Controllers\ProfileController;
     use App\Http\Controllers\Sheets\SheetPackageIndexController;
     use App\Http\Controllers\Sheets\SheetPackageShowController;
@@ -10,7 +11,7 @@
     Route::get("/", HomePageController::class)->name("home");
     Route::get("/open-source/npm", SheetPackageIndexController::class)->name("packages.index");
     Route::get("/open-source/npm/{package}", SheetPackageShowController::class)->name("packages.show");
-
+    Route::get("/open-source/patterns", PatternsIndexController::class)->name("patterns.index");
 
     Route::get('/dashboard', function () {
         return view('dashboard');
