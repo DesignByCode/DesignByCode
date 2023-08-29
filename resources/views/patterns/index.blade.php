@@ -9,12 +9,12 @@
                 <div>
                     <div class="relative bg-white dark:bg-gray-900 rounded-lg border-2 border-primary-500 aspect-video text-primary-500">
                         <div class="card-label">{{ $pattern->name }}</div>
-                        <div class="pattern-example w-full h-full">
+                        <div class="pattern-example w-full h-full ">
                             {!! $pattern->snippet !!}
                         </div>
                     </div>
                     <div class="bg-gray-900 overflow-clip rounded-lg">
-                        <div class="max-h-44 mask-image-b ">
+                        <div class="max-h-44 mask-image-b text-xs md:text-sm lg:text-base">
                             <pre class="language-html"><code>{{ Str::beautify($pattern->snippet)}} </code></pre>
                         </div>
                     </div>
