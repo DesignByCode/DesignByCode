@@ -4,7 +4,7 @@
         <h1 class="heading-1 mb-12">
             SVG Patterns
         </h1>
-        <div class="grid md:grid-cols-2 gap-x-6 gap-y-12 ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-6 gap-y-12">
             @foreach($patterns as $pattern)
                 <div>
                     <div class="relative bg-white dark:bg-gray-900 rounded-lg border-2 border-primary-500 aspect-video text-primary-500">
