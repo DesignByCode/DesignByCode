@@ -33,8 +33,6 @@
                 history.replaceState(null, null, `#${sectionId}`);
                 break;
             }
-
-            console.log(window.innerHeight / 4 + " | " + window.innerHeight / 2)
         }
     }
 
