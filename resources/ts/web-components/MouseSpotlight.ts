@@ -1,29 +1,29 @@
 class MouseSpotlight extends HTMLElement {
-  constructor() {
-    super()
-    this.classList.add("card")
-  }
+    constructor() {
+        super()
+        this.classList.add("spotlight")
+    }
 
-  connectedCallback() {
-    this.addEventListener("mousemove", this.mouseMover.bind(this))
-  }
+    connectedCallback() {
+        this.addEventListener("mousemove", this.mouseMover.bind(this))
+    }
 
-  disconnectedCallback() {
-    this.removeEventListener("mousemove", this.mouseMover)
-  }
+    disconnectedCallback() {
+        this.removeEventListener("mousemove", this.mouseMover)
+    }
 
-  /**
-   * Get mouse position within this component
-   * @param e
-   */
-  mouseMover(e: MouseEvent) {
-    const { currentTarget: target } = e
-    const rect = (target as HTMLElement).getBoundingClientRect()
-    let y = e.clientY - rect.top
-    let x = e.clientX - rect.left
-    ;(target as HTMLElement).style.setProperty("--mouse-x", `${x}px`)
-    ;(target as HTMLElement).style.setProperty("--mouse-y", `${y}px`)
-  }
+    /**
+     * Get mouse position within this component
+     * @param e
+     */
+    mouseMover(e: MouseEvent) {
+        const {currentTarget: target} = e
+        const rect = (target as HTMLElement).getBoundingClientRect()
+        let y = e.clientY - rect.top
+        let x = e.clientX - rect.left
+        ;(target as HTMLElement).style.setProperty("--mouse-x", `${x}px`)
+        ;(target as HTMLElement).style.setProperty("--mouse-y", `${y}px`)
+    }
 }
 
 customElements.define("mouse-spotlight", MouseSpotlight)

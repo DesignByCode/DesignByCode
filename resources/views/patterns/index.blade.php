@@ -1,5 +1,8 @@
 <x-main-layout>
-    <x-pattern.grid @class(['h-[500px] mask-image-b'])/>
+    <x-pattern.grid @class(['h-[500px] mask-image-b'])>
+
+    </x-pattern.grid>
+
     <div class="wrapper my-24 relative z-10">
         <h1 class="heading-1 ">
             SVG Patterns
@@ -9,7 +12,7 @@
         </p>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-6 gap-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-x-6 gap-y-12">
 
             {{--            <div class="relative bg-white dark:bg-gray-900 rounded-lg col-span-2 border-2 border-primary-500 aspect-video text-primary-500">--}}
             {{--                <svg width="100%" height="100%">--}}
@@ -24,12 +27,16 @@
 
             @foreach($patterns as $pattern)
                 <div>
-                    <div class="relative bg-white dark:bg-gray-900 rounded-lg border-2 border-primary-500 aspect-video text-primary-500">
-                        <div class="card-label">{{ $pattern->name }}</div>
-                        <div class="pattern-example w-full h-full ">
-                            {!! $pattern->snippet !!}
+                    <a href="{{ route('patterns.show', $pattern) }}" class="relative bg-white block dark:bg-gray-900 rounded-lg border-2 border-primary-500 aspect-video text-primary-500">
+                        <div class="card-label">
+                            {{ $pattern->name }}
                         </div>
-                    </div>
+                        <div class="pattern-example w-full h-full ">
+                            <div class="overflow-hidden h-full">
+                                {!! $pattern->snippet !!}
+                            </div>
+                        </div>
+                    </a>
                     <div class="bg-gray-900 overflow-clip rounded-lg">
                         <div class="max-h-44 mask-image-b text-xs md:text-sm lg:text-base">
                             <pre class="language-html"><code>{{ Str::beautify($pattern->snippet)}} </code></pre>

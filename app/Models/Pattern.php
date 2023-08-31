@@ -6,6 +6,11 @@
     use Illuminate\Database\Eloquent\Factories\HasFactory;
     use Illuminate\Database\Eloquent\Model;
 
+    /**
+     * @property mixed|string $slug
+     * @property mixed $name
+     * @property array|mixed|string|string[] $snippet
+     */
     class Pattern extends Model
     {
         use HasFactory, Observable;

@@ -5,6 +5,8 @@ import "./lib/copy-button"
 import Prism from 'prismjs';
 import "./lib/gsap-stuff"
 import "./lib/swap-svg"
+import "./web-components/MouseSpotlight"
+
 
 Prism.manual = true;
 Prism.highlightAll();

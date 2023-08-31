@@ -16,7 +16,9 @@
          */
         public function creating(Pattern $pattern): void
         {
+            $randomString = Str::uuid();
             $pattern->slug = Str::slug($pattern->name);
+            $pattern->snippet = str_replace("[random]", $randomString, $pattern->snippet);
         }
 
         /**
