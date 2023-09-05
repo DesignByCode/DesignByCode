@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer base {
+
+
     :root {
         --scrollbar-track-color: theme('colors.gray.500');
         --scrollbar-thumb-color: theme('colors.primary.500');
@@ -13,26 +15,35 @@
         --selection-background: theme('colors.primary.100');
         --selection-color: theme('colors.primary.600');
 
-
-        --prism-bg: theme('colors.gray.50');
-        --prism-text-comment: theme('colors.gray.800');
-        --prism-namespace: theme('colors.rose.500');
-        --prism-function-name: theme('colors.blue.300');
-        --prism-function-num-bool: theme('colors.orange.500');
-        --prism-class-name-property: theme('colors.yellow.500');
-        --prism-selector-keywords: theme('colors.pink.500');
-        --prism-string-char-variable: theme('colors.indigo.300');
-        --prism-operator-entity-url: theme('colors.sky.400');
+        --prism-bg: theme('colors.primary.200');
+        --prism-border-color: theme('colors.primary.300');
+        --prism-text-color: theme('colors.primary.900');
+        --prism-text-comment: theme('colors.primary.500');
+        --prism-namespace: theme('colors.teal.600');
+        --prism-function-name: theme('colors.blue.600');
+        --prism-function-num-bool: theme('colors.orange.900');
+        --prism-class-name-property: theme('colors.sky.900');
+        --prism-selector-keywords: theme('colors.pink.800');
+        --prism-string-char-variable: theme('colors.indigo.700');
+        --prism-operator-entity-url: theme('colors.sky.700');
         --prism-inserted: theme('colors.green.500');
+        --prism-text-punctuation: theme("colors.gray.900");
+
     }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --prism-bg: theme('colors.gray.900');
-            --prism-text-comment: theme('colors.primary.300');
-        }
+    .dark :not(pre) > code[class*="language-"],
+    .dark pre[class*="language-"] {
+        --prism-bg: theme('colors.gray.900');
+        --prism-border-color: theme('colors.gray.950');
+        --prism-text-color: theme('colors.gray.200');
+        --prism-text-comment: theme('colors.primary.300');
+        --prism-function-num-bool: theme('colors.orange.500');
+        --prism-selector-keywords: theme('colors.pink.500');
+        --prism-namespace: theme('colors.rose.600');
+        --prism-string-char-variable: theme('colors.secondary.600');
+        --prism-operator-entity-url: theme('colors.sky.600');
+        --prism-text-punctuation: theme("colors.gray.200")
     }
-
 
 
     /* Firefox */
@@ -73,7 +84,7 @@
     }
 
     .copy-button {
-        @apply pointer-events-auto bg-gray-950 text-primary-500 rounded px-2 py-1.5 border border-primary-500/50 absolute top-2 right-2 text-sm font-semibold;
+        @apply pointer-events-auto bg-primary-100 hover:bg-primary-200 text-primary-700 dark:bg-gray-950 dark:hover:bg-gray-900 dark:text-primary-500 rounded px-2 py-1.5 border border-primary-500 dark:border-primary-500/50  absolute top-2 right-2 text-sm font-semibold;
     }
 
     .language-header {

@@ -16,6 +16,7 @@
                 $table->string("slug");
                 $table->text("snippet");
                 $table->text("keywords")->nullable();
+                $table->boolean('premium')->default(false);
                 $table->timestamps();
             });
         }

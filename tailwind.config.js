@@ -30,6 +30,7 @@ export default {
         require("@designbycode/tailwindcss-conic-gradient"),
         require("@designbycode/tailwindcss-stripes"),
         require("@designbycode/tailwindcss-text-shadow"),
+        require("@designbycode/tailwindcss-text-stroke"),
         require("tailwindcss-attributes"),
 
         require('@tailwindcss/container-queries'),

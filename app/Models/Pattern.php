@@ -19,7 +19,8 @@
             "name",
             "slug",
             "snippet",
-            "keywords"
+            "keywords",
+            "premium"
         ];
 
 

@@ -1,6 +1,5 @@
 <x-main-layout>
     <x-pattern.grid @class(['h-[500px] mask-image-b'])>
-
     </x-pattern.grid>
 
     <div class="wrapper my-24 relative z-10">
@@ -11,23 +10,13 @@
             Here a {{ $patterns->total() }} you can use however you want. Watch out many more to follow.
         </p>
 
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 md:gap-x-6 gap-y-12">
-
-            {{--            <div class="relative bg-white dark:bg-gray-900 rounded-lg col-span-2 border-2 border-primary-500 aspect-video text-primary-500">--}}
-            {{--                <svg width="100%" height="100%">--}}
-            {{--                    <defs>--}}
-            {{--                        <pattern id="dbc_svg_pattern_overlapping_circles" patternUnits="userSpaceOnUse" width="199" height="199.5" y="0" x="0">--}}
-            {{--                        </pattern>--}}
-            {{--                    </defs>--}}
-            {{--                    <rect width="100%" height="100%" fill="url(#dbc_svg_pattern_overlapping_circles)"/>--}}
-            {{--                </svg>--}}
-            {{--            </div>--}}
-
-
+        <div class="relative my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-6 gap-y-8">
             @foreach($patterns as $pattern)
                 <div>
                     <a href="{{ route('patterns.show', $pattern) }}" class="relative bg-white block dark:bg-gray-900 rounded-lg border-2 border-primary-500 aspect-video text-primary-500">
+                        @if($pattern->premium)
+                            <x-icon.premium class="absolute right-2 top-2 scale-125"/>
+                        @endif
                         <div class="card-label">
                             {{ $pattern->name }}
                         </div>
@@ -37,7 +26,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="bg-gray-900 overflow-clip rounded-lg">
+                    <div class="bg-primary-200 dark:bg-gray-900  overflow-clip rounded-lg">
                         <div class="max-h-44 mask-image-b text-xs md:text-sm lg:text-base">
                             <pre class="language-html"><code>{{ Str::beautify($pattern->snippet)}} </code></pre>
                         </div>

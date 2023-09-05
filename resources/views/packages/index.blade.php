@@ -10,14 +10,14 @@
                     @endif
                 @endforeach
             </div>
-            <div class=" space-y-6">
+            <div class="space-y-6">
                 @foreach($packages as $package)
                     @if(($loop->index - 1) % 3 === 0)
                         <x-package-card :$package/>
                     @endif
                 @endforeach
             </div>
-            <div class=" space-y-6">
+            <div class="space-y-6">
                 @foreach($packages as $package)
                     @if(($loop->index - 2) % 3 === 0)
                         <x-package-card :$package/>
@@ -28,7 +28,6 @@
 
 
     </div>
-
 
 
 </x-main-layout>
