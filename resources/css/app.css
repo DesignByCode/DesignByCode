@@ -136,7 +136,7 @@
     }
 
     [class*=tentacle] {
-        @apply saturate-[100%] hue-rotate-[0deg] contrast-[110%]    ;
+        @apply saturate-[100%] hue-rotate-[55deg] contrast-[110%]    ;
     }
 
     .markdown-example {

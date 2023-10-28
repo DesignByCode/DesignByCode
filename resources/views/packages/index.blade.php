@@ -1,5 +1,4 @@
 <x-main-layout>
-
     <div class="wrapper py-24">
         <h1 class="heading-1 my-6">Packages</h1>
         <div class="grid grid-col-1 md:grid-cols-3 space-y-6 md:space-y-0 md:gap-x-6">
@@ -25,9 +24,5 @@
                 @endforeach
             </div>
         </div>
-
-
     </div>
-
-
 </x-main-layout>

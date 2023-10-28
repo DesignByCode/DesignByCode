@@ -18,13 +18,13 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"/>
                                     </svg>
                                 </button>
-                                <div hidden class="absolute bg-gradient-to-br from-primary-100 dark:from-primary-300 to-primary-50 dark:to-primary-100  rounded-lg w-[260px] border-2 border-primary-500 shadow-xl shadow-primary-500/10"
+                                <div hidden class="absolute bg-gray-50 dark:bg-gray-900 rounded-lg w-[260px] border-2 border-primary-500 shadow-xl shadow-primary-500/10"
                                      aria-labelledby="menu-button-{{ $loop->index }}"
                                      aria-orientation="vertical"
                                      role="none"
                                 >
                                     @foreach($link->children as $child)
-                                        <a class="text-gray-700 px-4 py-2 text-sm hover:bg-gray-100 space-x-2 font-semibold rounded-lg focus:bg-gray-100 focus:outline-none flex items-center"
+                                        <a class="text-gray-700 dark:text-gray-200 px-4 py-2 text-sm hover:bg-primary-100 dark:hover:bg-gray-800 space-x-2 font-semibold rounded-lg focus:bg-gray-100 focus:outline-none flex items-center"
                                            href="{{ route($child->route) }}" id="menu-item-0" role="menuitem" tabindex="-1"
                                         >
                                             <span class="border-2 rounded-lg text-primary-500 items-center justify-center border-primary-500 w-12 h-12 flex">

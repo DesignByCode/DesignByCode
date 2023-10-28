@@ -1,6 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import colors from "tailwindcss/colors";
 
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -14,7 +15,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: colors.amber,
+                primary: colors.purple,
                 secondary: colors.cyan,
                 tri: colors.rose,
                 gray: colors.slate,
@@ -31,6 +32,7 @@ export default {
         require("@designbycode/tailwindcss-stripes"),
         require("@designbycode/tailwindcss-text-shadow"),
         require("@designbycode/tailwindcss-text-stroke"),
+        require("@designbycode/tailwindcss-text-glitch"),
         require("tailwindcss-attributes"),
 
         require('@tailwindcss/container-queries'),

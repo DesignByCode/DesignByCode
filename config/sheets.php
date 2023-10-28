@@ -7,7 +7,6 @@
         'default_collection' => null,
 
         'collections' => [
-
             'packages' => [
                 'disk' => 'packages',
                 'sheet_class' => App\Sheets\Package::class,
