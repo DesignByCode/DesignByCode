@@ -1,7 +1,7 @@
 import './bootstrap';
+import "./lib/password-generator"
 //@ts-expect-error
 import.meta.glob(["../img/**/*"])
-
 
 const scaleSlider = document.getElementById('pattern_size') as HTMLInputElement
 const patternElements = document.querySelectorAll('[id^="dbc-"]');
@@ -22,8 +22,6 @@ if (scaleSlider && patternElements.length && colorInput) {
             item.setAttribute('style', `color: ${selectedColor}`);
         })
     });
-
-
 }
 
 

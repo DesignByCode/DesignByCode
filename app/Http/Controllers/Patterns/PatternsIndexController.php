@@ -11,7 +11,7 @@
         public function __invoke(): View
         {
             return view("patterns.index", [
-                'patterns' => Pattern::paginate()
+                'patterns' => Pattern::paginate(21)
             ]);
         }
     }

@@ -14,7 +14,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: colors.indigo,
+                primary: colors.amber,
                 secondary: colors.cyan,
                 tri: colors.rose,
                 gray: colors.slate,

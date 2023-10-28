@@ -6,6 +6,8 @@
     use App\Http\Controllers\ProfileController;
     use App\Http\Controllers\Sheets\SheetPackageIndexController;
     use App\Http\Controllers\Sheets\SheetPackageShowController;
+    use App\Http\Controllers\Tools\PasswordGeneratorController;
+    use App\Http\Controllers\Tools\ToolsPageIndexController;
     use Illuminate\Support\Facades\Route;
 
 
@@ -14,6 +16,10 @@
     Route::get("/open-source/npm/{package}", SheetPackageShowController::class)->name("packages.show");
     Route::get("/open-source/patterns", PatternsIndexController::class)->name("patterns.index");
     Route::get("/open-source/patterns/{pattern:slug}", PatternsShowController::class)->name("patterns.show");
+//    Route::get("dev-tools", DevToolsIndexController::class)->name("dev-tools.index");
+
+    Route::get('tools', ToolsPageIndexController::class)->name("tools");
+    Route::get("tools/random-password-generator", PasswordGeneratorController::class)->name("tools.password");
 
     Route::get('/dashboard', function () {
         return view('dashboard');

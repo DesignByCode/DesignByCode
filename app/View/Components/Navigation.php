@@ -49,6 +49,12 @@
                         ]
                     ]
                 ],
+//                (object)[
+//                    "name" => "Dev Tools",
+//                    "route" => "dev-tools.index",
+//                    "active" => "/dev-tools",
+//                    "children" => null
+//                ]
 //            (object) [
 //                "name" => "Contact Us",
 //                "route" => "contact-us",

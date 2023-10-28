@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-
-
     :root {
         --scrollbar-track-color: theme('colors.gray.500');
         --scrollbar-thumb-color: theme('colors.primary.500');
@@ -152,42 +150,6 @@
 
     .card-label {
         @apply px-4 py-1.5 text-base border-2 border-primary-100 dark:border-gray-950;
-    }
-
-
-    .spotlight {
-        position: relative;
-        border-radius: inherit;
-        --mouse-x: 0;
-        --mouse-y: 0;
-        --light: theme('colors.red.100')
-    }
-
-    @media (prefers-color-scheme: dark) {
-        .spotlight {
-            --light: theme('colors.primary.900')
-        }
-    }
-
-
-    .spotlight:hover::before {
-        opacity: 1;
-    }
-
-    .spotlight::before {
-        content: "";
-        background: radial-gradient(300px circle at var(--mouse-x) var(--mouse-y), var(--light), transparent);
-        height: 100%;
-        mix-blend-mode: color-dodge;
-        width: 100%;
-        z-index: 10;
-        position: absolute;
-        opacity: 0;
-        transition-duration: 250ms;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        transform-origin: center;
     }
 
 
