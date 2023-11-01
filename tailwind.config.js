@@ -33,6 +33,7 @@ export default {
         require("@designbycode/tailwindcss-text-shadow"),
         require("@designbycode/tailwindcss-text-stroke"),
         require("@designbycode/tailwindcss-text-glitch"),
+        require("@designbycode/tailwindcss-reflection"),
         require("tailwindcss-attributes"),
 
         require('@tailwindcss/container-queries'),

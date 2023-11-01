@@ -24,6 +24,19 @@ if (scaleSlider && patternElements.length && colorInput) {
     });
 }
 
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         console.log(entry)
+//     })
+// })
+//
+// const cards: any = document.querySelectorAll('.card')
+// if (cards.length) {
+//     cards.forEach((card: any) => {
+//         observer.observe(card)
+//     })
+// }
+
 
 //
 // const colorInput = document.getElementById("pattern_color") as HTMLInputElement;

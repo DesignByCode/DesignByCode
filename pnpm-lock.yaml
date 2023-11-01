@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@designbycode/tailwindcss-conic-gradient': ^1.0.3
   '@designbycode/tailwindcss-mask-image': ^2.0.3
+  '@designbycode/tailwindcss-reflection': ^1.0.0
   '@designbycode/tailwindcss-stripes': ^1.0.5
   '@designbycode/tailwindcss-text-glitch': ^1.0.0
   '@designbycode/tailwindcss-text-shadow': ^2.0.0
@@ -38,6 +39,7 @@ dependencies:
 devDependencies:
   '@designbycode/tailwindcss-conic-gradient': 1.0.3_tailwindcss@3.3.5
   '@designbycode/tailwindcss-mask-image': 2.0.3_tailwindcss@3.3.5
+  '@designbycode/tailwindcss-reflection': 1.0.0_tailwindcss@3.3.5
   '@designbycode/tailwindcss-stripes': 1.0.5_tailwindcss@3.3.5
   '@designbycode/tailwindcss-text-glitch': 1.0.0_tailwindcss@3.3.5
   '@designbycode/tailwindcss-text-shadow': 2.0.0_tailwindcss@3.3.5
@@ -77,6 +79,14 @@ packages:
 
   /@designbycode/tailwindcss-mask-image/2.0.3_tailwindcss@3.3.5:
     resolution: {integrity: sha512-GBc3NFahW3BzDHqPCd3XI5ALvtV3lQVMFQdUwsrQzJ4CvWCMuF2ELjveV/1SE+QQsr6rKE9GIZxTXGoG/mHMVQ==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.3.5
+    dev: true
+
+  /@designbycode/tailwindcss-reflection/1.0.0_tailwindcss@3.3.5:
+    resolution: {integrity: sha512-DpJPq7edgpxJ+VA1uC6zeJYhOHge7zqhmf1jzGQBxL/Msq9U+WB1lZ/PexP8DM8jL9D1NC+CzVIecK5K3b94AA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >=3.0.0-alpha.1'
     dependencies:

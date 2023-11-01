@@ -8,6 +8,7 @@
     "devDependencies": {
         "@designbycode/tailwindcss-conic-gradient": "^1.0.3",
         "@designbycode/tailwindcss-mask-image": "^2.0.3",
+        "@designbycode/tailwindcss-reflection": "^1.0.0",
         "@designbycode/tailwindcss-stripes": "^1.0.5",
         "@designbycode/tailwindcss-text-glitch": "^1.0.0",
         "@designbycode/tailwindcss-text-shadow": "^2.0.0",

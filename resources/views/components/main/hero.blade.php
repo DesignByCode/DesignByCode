@@ -2,8 +2,8 @@
 
     <div class="wrapper card relative z-10 select-none">
         <div class="w-full max-w-2xl">
-            <h1 class="heading-1">
-                Hi, I am <br/> <span class="text-primary-500">Claude Myburgh.</span><br/> Web Artisan and Developer.
+            <h1 class="heading-1 reflect">
+                Hi, I am <br/> <span class="text-primary-500 ">Claude Myburgh.</span><br/> Web Artisan and Developer.
             </h1>
             <p class="text-xl my-3 font-semibold  leading-loose">I ❤️ building sublime websites for people like you.</p>
         </div>
