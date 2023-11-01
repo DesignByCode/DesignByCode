@@ -7,7 +7,7 @@ export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         "./storage/app/packages/*.{php,text,md}",
-        './storage/framework/views/*.php',
+        './storage/framework/views/*.{php,text,md}',
         './resources/views/**/*.blade.php',
     ],
     darkMode: "class",
