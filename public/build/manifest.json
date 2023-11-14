@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-4233aa0e.css",
+    "file": "assets/app-2bdf72a4.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -71,7 +71,7 @@
     "src": "resources/img/tentacles/t6.webp"
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-6efa8284.js",
+    "file": "assets/app-810b6e5e.js",
     "isEntry": true,
     "src": "resources/ts/app.ts"
   }

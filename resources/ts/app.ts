@@ -1,7 +1,9 @@
 import './bootstrap';
 import "./lib/password-generator"
+import Typed from 'typed.js';
 //@ts-expect-error
 import.meta.glob(["../img/**/*"])
+
 
 const scaleSlider = document.getElementById('pattern_size') as HTMLInputElement
 const patternElements = document.querySelectorAll('[id^="dbc-"]');
@@ -23,6 +25,20 @@ if (scaleSlider && patternElements.length && colorInput) {
         })
     });
 }
+
+
+const typed = new Typed('#logo', {
+    strings: ['DesignByCode', 'designbycode'],
+    typeSpeed: 50,
+    backSpeed: 100,
+
+    smartBackspace: true,
+    backDelay: 1700,
+    showCursor: false,
+    loop: true,
+    fadeOutClass: 'typed-fade-out',
+    fadeOutDelay: 500,
+});
 
 // const observer = new IntersectionObserver(entries => {
 //     entries.forEach(entry => {
