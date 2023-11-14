@@ -8,7 +8,7 @@
         <div class="wrapper grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
                 <h2 class="heading-1 mb-6 card">
-                    Author of several <span class="text-primary-500">Javascript</span> and <span class="text-primary-500">PHP</span> open source packages.
+                    Author of several <span class="grad">Javascript</span> and <span class="grad">PHP</span> open source packages.
                 </h2>
                 <a class="cta"
                    href="{{ route("packages.index") }}">View
