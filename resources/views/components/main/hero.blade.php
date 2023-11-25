@@ -3,7 +3,9 @@
     <div class="wrapper card relative z-10 select-none">
         <div class="w-full max-w-2xl">
             <h1 class="heading-1">
-                Hi, I am <br/> <span class="grad  ">Claude Myburgh.</span><br/> Web Artisan and Developer.
+                Hi, I am <br/>
+                <span class="grad pb-1">Claude Myburgh.</span>
+                <br/> Web Artisan and Developer.
             </h1>
             <p class="text-xl my-3 font-semibold  leading-loose">I ❤️ building sublime websites for people like you.</p>
         </div>
@@ -17,3 +19,6 @@
         <img class="absolute drop-shadow-large origin-top-right w-full tentacle top-0 right-0" width="1141" height="815" src="{{ Vite::asset('resources/img/tentacles/t5.webp') }}" alt="tentacle 5">
     </div>
 </div>
+
+
+

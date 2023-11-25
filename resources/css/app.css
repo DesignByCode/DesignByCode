@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
     :root {
+
         --scrollbar-track-color: theme('colors.gray.500');
         --scrollbar-thumb-color: theme('colors.primary.500');
         --scrollbar-thumb-border-width: 1px;
@@ -28,6 +30,19 @@
         --prism-text-punctuation: theme("colors.gray.900");
 
     }
+
+    @property --gradient-angle {
+        inherits: false;
+        initial-value: 0deg;
+        syntax: "<angle>";
+    }
+
+    @keyframes spin-gradient {
+        to {
+            --gradient-angle: 360deg;
+        }
+    }
+
 
     .dark :not(pre) > code[class*="language-"],
     .dark pre[class*="language-"] {
@@ -77,6 +92,8 @@
 
 
 @layer components {
+
+
     .wrapper {
         @apply w-full max-w-7xl px-4 md:px-6 lg:px-8 mx-auto;
     }
@@ -100,6 +117,7 @@
     .grad {
         @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-transparent pr-1 bg-clip-text;
     }
+
 
     .nav-button {
         position: relative;
@@ -157,4 +175,33 @@
     }
 
 
+    .glow {
+        animation: spin-gradient 2s linear infinite;
+        background: conic-gradient(
+            from var(--gradient-angle),
+            theme('colors.primary[500]'),
+            theme('colors.secondary[500]'),
+            theme('colors.primary[500]')
+        ) border-box;
+        @apply border-[5px] border-transparent relative z-10 text-gray-700 dark:text-gray-200;
+    }
+
+    .glow::before {
+        border-radius: inherit;
+        @apply content-[""] absolute inset-0 -z-[1] bg-gray-100 dark:bg-gray-950;
+    }
+
+    .glow::after {
+        animation: spin-gradient 2s linear infinite;
+        border-radius: inherit;
+        background: conic-gradient(
+            from var(--gradient-angle),
+            theme('colors.primary[500]'),
+            theme('colors.secondary[500]'),
+            theme('colors.primary[500]')
+        );
+        @apply content-[""] absolute inset-0 blur-2xl -z-[2];
+    }
+
 }
+
