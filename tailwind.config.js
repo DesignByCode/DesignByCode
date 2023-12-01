@@ -15,10 +15,10 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: colors.cyan,
+                primary: colors.sky,
                 secondary: colors.fuchsia,
                 tri: colors.rose,
-                gray: colors.slate,
+                gray: colors.gray,
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
