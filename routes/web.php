@@ -20,7 +20,7 @@
 //    Route::get("tools/random-password-generator", PasswordGeneratorController::class)->name("tools.password");
 
 //    Route::get('openai', OpenApiController::class)->name("openapi");
-    
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');

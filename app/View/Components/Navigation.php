@@ -21,12 +21,6 @@
                     "children" => null
                 ],
                 (object)[
-                    "name" => "OpenApi",
-                    "route" => "openapi",
-                    "active" => "/openapi",
-                    "children" => null
-                ],
-                (object)[
                     "name" => "Open Source",
                     "route" => "packages.index",
                     "active" => "open-source*",
