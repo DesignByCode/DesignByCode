@@ -8,6 +8,7 @@ import "./lib/swap-svg"
 import "./web-components/MouseSpotlight"
 import Particles from "./theme-related/Particles";
 
+// import "./theme-related/Noise"
 
 Prism.manual = true;
 Prism.highlightAll();
@@ -27,3 +28,5 @@ new Particles("canvas", {
     },
     count: 100,
 })
+
+

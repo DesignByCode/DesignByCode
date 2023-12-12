@@ -1,13 +1,12 @@
 <?php
 
     use App\Http\Controllers\Frontend\HomePageController;
+    use App\Http\Controllers\OpenApiController;
     use App\Http\Controllers\Patterns\PatternsIndexController;
     use App\Http\Controllers\PatternsShowController;
     use App\Http\Controllers\ProfileController;
     use App\Http\Controllers\Sheets\SheetPackageIndexController;
     use App\Http\Controllers\Sheets\SheetPackageShowController;
-    use App\Http\Controllers\Tools\PasswordGeneratorController;
-    use App\Http\Controllers\Tools\ToolsPageIndexController;
     use Illuminate\Support\Facades\Route;
 
 
@@ -18,8 +17,10 @@
     Route::get("/open-source/patterns/{pattern:slug}", PatternsShowController::class)->name("patterns.show");
 //    Route::get("dev-tools", DevToolsIndexController::class)->name("dev-tools.index");
 
-    Route::get('tools', ToolsPageIndexController::class)->name("tools");
-    Route::get("tools/random-password-generator", PasswordGeneratorController::class)->name("tools.password");
+//    Route::get('tools', ToolsPageIndexController::class)->name("tools");
+//    Route::get("tools/random-password-generator", PasswordGeneratorController::class)->name("tools.password");
+
+    Route::get('openai', OpenApiController::class)->name("openapi");
 
     Route::get('/dashboard', function () {
         return view('dashboard');
