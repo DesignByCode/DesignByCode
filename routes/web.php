@@ -1,7 +1,6 @@
 <?php
 
     use App\Http\Controllers\Frontend\HomePageController;
-    use App\Http\Controllers\OpenApiController;
     use App\Http\Controllers\Patterns\PatternsIndexController;
     use App\Http\Controllers\PatternsShowController;
     use App\Http\Controllers\ProfileController;
@@ -20,8 +19,8 @@
 //    Route::get('tools', ToolsPageIndexController::class)->name("tools");
 //    Route::get("tools/random-password-generator", PasswordGeneratorController::class)->name("tools.password");
 
-    Route::get('openai', OpenApiController::class)->name("openapi");
-
+//    Route::get('openai', OpenApiController::class)->name("openapi");
+    
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
