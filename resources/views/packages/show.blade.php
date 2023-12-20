@@ -11,6 +11,7 @@
                 @else
                     <x-link.github/>
                 @endif
+                <x-ads.shopify/>
             </div>
         </aside>
     </div>

@@ -15,17 +15,6 @@
             </span>
         </button>
 
-        {{--        <div class="max-w-md rounded bg-gray-900 aspect-video my-12">--}}
-        {{--            <svg width="100%" height="100%">--}}
-        {{--                <path stroke-width="3" stroke="currentColor" d="M10 100 C10 0 100 0 100 100"/>--}}
-        {{--                <path stroke-width="3" stroke="currentColor" d="M150 100 c0 0 100 0 100 0 "/>--}}
-        {{--                <circle fill="yellow" r="5" cy="10" cx="10"/>--}}
-        {{--                <circle fill="yellow" r="5" cy="10" cx="100"/>--}}
-
-        {{--            </svg>--}}
-        {{--        </div>--}}
-
-
         <div class="grid grid-cols-6 my-6 gap-6 relative">
             <div class="col-span-6 md:col-span-4">
                 <div class="edit_svg relative bg-white block dark:bg-gray-900 rounded-lg border-2 border-primary-500 aspect-video text-primary-500">
@@ -36,28 +25,55 @@
                         <pre class="language-html"><code>{{ Str::beautify($pattern->snippet) }}</code></pre>
                     </div>
                 </div>
+                <div class="flex space-x-2">
+                    <button class="button relative" onclick="downloadSVG()">Download SVG</button>
+                    <button class="button relative" onclick="downloadPNG()">Download PNG</button>
+                </div>
             </div>
-            <div class="col-span-6 md:col-span-2 relative">
-                {{--                <div class="sticky top-[100px] space-y-2 bg-white min-h-[200px] block dark:bg-gray-900 p-6 rounded-lg border-2 border-primary-500 text-primary-500">--}}
-                {{--                    <div>--}}
-                {{--                        <label class="mb-2" for="pattern_color">Pattern color</label>--}}
-                {{--                        <div class="flex space-x-2 border border-gray-800 rounded-md p-2">--}}
-                {{--                            <input type="color" class="h-6 w-6 rounded p-1px" id="pattern_color">--}}
-                {{--                            <span id="colorDisplay">Color Preview</span>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                    <div>--}}
-                {{--                        <label class="mb-2" for="pattern_size">Pattern size</label>--}}
-                {{--                        <div class="flex space-x-2 border border-gray-800 rounded-md p-2 accent-primary-500">--}}
-                {{--                            <input type="range" class="h-6 w-full rounded p-1px" id="pattern_size" min="0.2" max="3" step="0.1" value="1">--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                </div>--}}
+            <div id="editor" class="col-span-6 md:col-span-2 relative">
             </div>
         </div>
     </div>
-
-
 </x-main-layout>
 
+
+<script>
+    function downloadFile(blob, fileName) {
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = fileName;
+        link.click();
+        console.log(link)
+    }
+
+    function downloadPNG() {
+        const svg = document.querySelector('[id^="dbc-svg-"]');
+        const svgData = new XMLSerializer().serializeToString(svg);
+
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+
+        img.onload = function () {
+            // canvas.width = svg.getAttribute('width');
+            // canvas.height = svg.getAttribute('height');
+            canvas.width = Number(svg.querySelector('pattern').getAttribute('width'));
+            canvas.height = Number(svg.querySelector('pattern').getAttribute('height'));
+            ctx.drawImage(img, 0, 0);
+            canvas.toBlob(function (blob) {
+                downloadFile(blob, 'pattern.png');
+            });
+        };
+        img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+    }
+
+    function downloadSVG() {
+        const svg = document.querySelector('[id^="dbc-svg-"]');
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const blob = new Blob([svgData], {type: 'image/svg+xml'});
+        console.log(svg)
+        downloadFile(blob, 'pattern.svg');
+    }
+
+</script>
 

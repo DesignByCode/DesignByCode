@@ -1,5 +1,5 @@
 <div {{ $attributes->merge(['class' => 'w-full min-h-screen isolate relative hero flex items-center max-w-full overflow-clip']) }}>
-    <canvas class="absolute top-0 bottom-0 opacity-60 w-full " id="canvas"></canvas>
+    {{--    <canvas class="absolute top-0 bottom-0 opacity-60 w-full " id="canvas"></canvas>--}}
     <div class="wrapper card relative z-10 select-none">
         <div class="w-full max-w-2xl">
             <h1 class="heading-1 text-bal">

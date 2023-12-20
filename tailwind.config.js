@@ -19,6 +19,11 @@ export default {
                 secondary: colors.fuchsia,
                 tri: colors.rose,
                 gray: colors.gray,
+                shopify: {
+                    light: "#8db849",
+                    dark: "#5a863e",
+                    gray: "#1a1919"
+                }
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],

@@ -83,9 +83,10 @@ export default class Particles {
                 velocityX: (Math.random() - 0.5) * this.getRandomSpeed(),
                 velocityY: (Math.random() - 0.5) * this.getRandomSpeed(),
                 size: this.getRandomSize(),
-                color: "transparent" //`hsl(${Math.random() * 300}, 100%, 50%)`
+                color: `hsl(${Math.random() * 300}, 100%, 50%)`
             };
             this.particles.push(particle);
+
         }
     }
 
@@ -125,7 +126,6 @@ export default class Particles {
     }
 
     private draw() {
-
         this.particles.forEach((particle) => {
             this.ctx!.fillStyle = particle.color;
             this.ctx!.beginPath();

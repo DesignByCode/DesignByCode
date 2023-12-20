@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-8f51756b.css",
+    "file": "assets/app-6d6d9149.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -13,6 +13,38 @@
     "file": "assets/prism-c9e70a92.css",
     "isEntry": true,
     "src": "resources/css/prism.css"
+  },
+  "resources/img/ads/2x/awning-long@2x.png": {
+    "file": "assets/awning-long@2x-5800b667.png",
+    "src": "resources/img/ads/2x/awning-long@2x.png"
+  },
+  "resources/img/ads/2x/awning-small@2x.png": {
+    "file": "assets/awning-small@2x-73cbdc2b.png",
+    "src": "resources/img/ads/2x/awning-small@2x.png"
+  },
+  "resources/img/ads/2x/awning@2x.png": {
+    "file": "assets/awning@2x-1ba3777f.png",
+    "src": "resources/img/ads/2x/awning@2x.png"
+  },
+  "resources/img/ads/2x/shopify-logo@2x.png": {
+    "file": "assets/shopify-logo@2x-562258e4.png",
+    "src": "resources/img/ads/2x/shopify-logo@2x.png"
+  },
+  "resources/img/ads/SVG/awning-long.svg": {
+    "file": "assets/awning-long-6a0c11bc.svg",
+    "src": "resources/img/ads/SVG/awning-long.svg"
+  },
+  "resources/img/ads/SVG/awning-small.svg": {
+    "file": "assets/awning-small-987dbb1e.svg",
+    "src": "resources/img/ads/SVG/awning-small.svg"
+  },
+  "resources/img/ads/SVG/awning.svg": {
+    "file": "assets/awning-0e34119d.svg",
+    "src": "resources/img/ads/SVG/awning.svg"
+  },
+  "resources/img/ads/SVG/shopify-logo.svg": {
+    "file": "assets/shopify-logo-a8cb9752.svg",
+    "src": "resources/img/ads/SVG/shopify-logo.svg"
   },
   "resources/img/customers/CB.svg": {
     "file": "assets/CB-f9ce5193.svg",
@@ -71,7 +103,7 @@
     "src": "resources/img/tentacles/t6.webp"
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-f35be858.js",
+    "file": "assets/app-aa79e4f6.js",
     "isEntry": true,
     "src": "resources/ts/app.ts"
   }
