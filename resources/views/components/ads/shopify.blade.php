@@ -1,5 +1,5 @@
-<a href="{{ config('affiliate.shopify.link') }}" target="_blank"
-   class="relative @container/shopify w-full block rounded-xl overflow-clip no-underline group transition hover:scale-105 shadow-lg hover:shadow-shopify-light/60">
+<a href="{{ config('affiliate.shopify.link') }}"
+   target="_blank" {{ $attributes->merge(['class' => 'relative @container/shopify w-full block rounded-xl overflow-clip no-underline group transition hover:scale-105 shadow-lg hover:shadow-shopify-light/60']) }}>
     <div class="flex @lg/shopify:flex-wrap flex-col bg-white dark:bg-gray-900 @lg/shopify:flex-row items-center justify-between text-center p-6 space-y-4 @lg/shopify:space-x-8 pt-16 @5xl/shopify:pt-20">
 
         <img src="{{ Vite::asset('resources/img/ads/2x/awning@2x.png') }}" class="absolute group-hover:-translate-y-full transition block top-0 @md/shopify:-top-12 w-full  inset-x-0 @xl/shopify:hidden" alt="">
