@@ -14,6 +14,11 @@
     "isEntry": true,
     "src": "resources/css/prism.css"
   },
+  "resources/css/spotlight.css": {
+    "file": "assets/spotlight-aab01680.css",
+    "isEntry": true,
+    "src": "resources/css/spotlight.css"
+  },
   "resources/img/ads/2x/awning-long@2x.png": {
     "file": "assets/awning-long@2x-5800b667.png",
     "src": "resources/img/ads/2x/awning-long@2x.png"
