@@ -1,7 +1,7 @@
 <x-main-layout>
     <div class="wrapper py-24">
 
-        <h1 class="heading-1 my-6">Packages</h1>
+        <h1 class="heading-1">Packages</h1>
         <div class="my-6 flex items-center justify-center ">
             <x-ads.shopify/>
         </div>
@@ -12,7 +12,6 @@
                         <x-package-card :$package/>
                     @endif
                 @endforeach
-
             </div>
             <div class="space-y-6">
                 @foreach($packages as $package)

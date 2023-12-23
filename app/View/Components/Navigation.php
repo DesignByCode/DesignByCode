@@ -21,6 +21,12 @@
                     "children" => null
                 ],
                 (object)[
+                    "name" => "Blog",
+                    "route" => "posts.index",
+                    "active" => "posts*",
+                    "children" => null
+                ],
+                (object)[
                     "name" => "Open Source",
                     "route" => "packages.index",
                     "active" => "open-source*",

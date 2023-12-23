@@ -143,3 +143,22 @@ export default class Particles {
         requestAnimationFrame(this.animate);
     };
 }
+
+/*
+    How to use
+    ---------------------------------------------------
+    new Particles("canvas", {
+    speed: {
+        min: 1,
+        max: 6,
+    },
+    size: {
+        min: 1,
+        max: 3,
+    },
+    count: 100,
+})
+
+ */
+
+

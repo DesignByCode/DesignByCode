@@ -3,6 +3,8 @@
     use App\Http\Controllers\Frontend\HomePageController;
     use App\Http\Controllers\Patterns\PatternsIndexController;
     use App\Http\Controllers\PatternsShowController;
+    use App\Http\Controllers\Posts\PostPageController;
+    use App\Http\Controllers\Posts\PostsIndexController;
     use App\Http\Controllers\ProfileController;
     use App\Http\Controllers\Sheets\SheetPackageIndexController;
     use App\Http\Controllers\Sheets\SheetPackageShowController;
@@ -14,11 +16,14 @@
     Route::get("/open-source/npm/{package}", SheetPackageShowController::class)->name("packages.show");
     Route::get("/open-source/patterns", PatternsIndexController::class)->name("patterns.index");
     Route::get("/open-source/patterns/{pattern:slug}", PatternsShowController::class)->name("patterns.show");
-//    Route::get("dev-tools", DevToolsIndexController::class)->name("dev-tools.index");
+    Route::get('posts', PostsIndexController::class)->name('posts.index');
+    Route::get('posts/{post:slug}', PostPageController::class)->name('posts.show');
 
+
+    //    Route::get("dev-tools", DevToolsIndexController::class)->name("dev-tools.index");
 //    Route::get('tools', ToolsPageIndexController::class)->name("tools");
 //    Route::get("tools/random-password-generator", PasswordGeneratorController::class)->name("tools.password");
-    
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');

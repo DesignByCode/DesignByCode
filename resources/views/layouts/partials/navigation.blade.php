@@ -1,7 +1,7 @@
-<nav class="fixed top-0  inset-x-0 z-50 bg-primary-200 dark:bg-gray-950/60 backdrop-blur-lg py-3 flex items-center border-b-2 border-primary-500 shadow-xl shadow-primary-500/10">
+<nav class="fixed top-0 inset-x-0 z-50 bg-primary-200 dark:bg-gray-950/60 backdrop-blur-lg py-2 flex items-center border-b border-primary-500/50 shadow-xl shadow-primary-500/10">
     <headless-navigation class="wrapper">
         <div class="flex justify-between items-center">
-            <a id="logo" class="text-2xl md:text-4xl grad font-black nav-button nav-button-active inline-block" href="{{ route('home') }}">{{ config('app.name') }}</a>
+            <a id="logo" class="text-2xl md:text-3xl grad font-black nav-button nav-button-active inline-flex " href="{{ route('home') }}">{{ config('app.name') }}</a>
             <div class="flex items-center">
                 <div class="lg:flex space-x-2 items-center hidden mr-4">
                     @foreach($links as $link)
@@ -65,7 +65,7 @@
                 </button>
             </div>
         </div>
-        <div hidden id="mobile_close" class="w-full mt-4 lg:hidden space-y-4 font-bold items-center">
+        <div hidden id="mobile_close" class="w-full mt-4 lg:hidden space-y-4 font-semibold leading-6 items-center">
             @foreach($links as $link)
                 @if(!$link->children)
                     <a @class(['px-4 py-2 rounded font-bold w-full block hover:bg-primary-500',

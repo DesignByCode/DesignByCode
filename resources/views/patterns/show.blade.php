@@ -30,7 +30,11 @@
                     <button class="button relative" onclick="downloadPNG()">Download PNG</button>
                 </div>
             </div>
-            <div id="editor" class="col-span-6 md:col-span-2 relative">
+            <div class="col-span-6 md:col-span-2 relative">
+                <div class="sticky top-32 space-y-6">
+                    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="claudeu" data-color="#FFDD00" data-emoji="" data-font="Cookie" data-text="Buy me a coffee"
+                            data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+                </div>
             </div>
         </div>
     </div>

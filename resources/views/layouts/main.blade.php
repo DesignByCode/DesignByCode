@@ -34,9 +34,9 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800,900&display=swap" rel="stylesheet"/>
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/css/prism.css', 'resources/css/markdown.css', 'resources/ts/app.ts'])
+    @vite(['resources/css/app.css', 'resources/css/prism.css', 'resources/css/markdown.css', 'resources/css/spotlight.css', 'resources/ts/app.ts'])
 </head>
-<body class="font-sans text-gray-700 dark:text-gray-300 bg-primary-50 dark:bg-gray-950 antialiased overflow-x-clip min-h-screen">
+<body class="font-sans text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-950 antialiased overflow-x-clip min-h-screen">
 @production
     <!-- Google Tag Manager (noscript) -->
     <noscript>

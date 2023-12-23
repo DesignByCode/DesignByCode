@@ -1,4 +1,4 @@
-<a href="{{ $url }}" target="_blank" {{ $attributes->merge(['class' => "border border-primary-500 rounded-md p-6 bg-gradient-to-br from-primary-100 reflect reflect-offset-2 reflect-opacity-15 to-primary-50 dark:from-gray-950
+<a href="{{ $url }}" target="_blank" {{ $attributes->merge(['class' => "border border-primary-500 rounded-md p-6 bg-gradient-to-br from-primary-100 to-primary-50 dark:from-gray-950
 dark:to-primary-950 shadow-lg
 shadow-primary-500/25 flex
  items-center relative"])

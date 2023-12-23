@@ -4,5 +4,8 @@
     ],
     "hostgator" => [
         "link" => env('AFFILIATE_HOSTGATOR')
+    ],
+    "namecheap" => [
+        "link" => env('AFFILIATE_NAMECHEAP')
     ]
 ];

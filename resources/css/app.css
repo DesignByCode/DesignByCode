@@ -5,7 +5,6 @@
 
 @layer base {
     :root {
-
         --scrollbar-track-color: theme('colors.gray.500');
         --scrollbar-thumb-color: theme('colors.primary.500');
         --scrollbar-thumb-border-width: 1px;
@@ -28,7 +27,6 @@
         --prism-operator-entity-url: theme('colors.sky.700');
         --prism-inserted: theme('colors.green.500');
         --prism-text-punctuation: theme("colors.gray.900");
-
     }
 
     @property --gradient-angle {
@@ -111,11 +109,11 @@
     }
 
     .heading-1 {
-        @apply text-5xl md:text-6xl lg:text-7xl text-gray-800 font-black dark:text-gray-200 tracking-tighter;
+        @apply text-3xl md:text-4xl lg:text-6xl text-gray-800 font-black dark:text-gray-200 tracking-tighter text-balance;
     }
 
     .heading-2 {
-        @apply text-4xl md:text-5xl lg:text-6xl text-gray-800 font-black dark:text-gray-200 tracking-tighter;
+        @apply text-2xl md:text-3xl lg:text-4xl text-gray-800 font-black dark:text-gray-200 tracking-tighter text-balance;
     }
 
     .grad {
@@ -150,8 +148,8 @@
     }
 
     .nav-button::after {
-        height: 5px;
-        bottom: -14px;
+        height: 2px;
+        bottom: -10px;
         opacity: 0.75;
         border-radius: 100% 0 0 100%;
         background: linear-gradient(to right, transparent, theme('colors.white'), transparent);

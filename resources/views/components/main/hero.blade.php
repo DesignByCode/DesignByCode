@@ -2,10 +2,10 @@
     {{--    <canvas class="absolute top-0 bottom-0 opacity-60 w-full " id="canvas"></canvas>--}}
     <div class="wrapper card relative z-10 select-none">
         <div class="w-full max-w-2xl">
-            <h1 class="heading-1 text-bal">
-                Hi, I am <br/>
-                <span class="grad pb-1">Claude Myburgh.</span>
-                <br/> Web Artisan and Developer.
+            <h1 class="heading-1  text-balance">
+                Hi, I am
+                <span class="grad pb-1 inline-block">Claude Myburgh.</span>
+                Web Artisan and Developer.
             </h1>
             <p class="text-xl my-3 font-semibold  leading-loose">I ❤️ building sublime websites for people like you.</p>
         </div>

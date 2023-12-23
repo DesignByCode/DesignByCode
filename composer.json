@@ -12,6 +12,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "mallardduck/html-formatter": "^1.0",
+        "spatie/laravel-sluggable": "^3.5",
         "spatie/sheets": "^1.10"
     },
     "require-dev": {
