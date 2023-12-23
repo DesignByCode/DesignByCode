@@ -14,7 +14,6 @@
         {
             $this->call([
                 UserSeeder::class,
-//                PostSeeder::class,
                 PatternSeeder::class
             ]);
         }

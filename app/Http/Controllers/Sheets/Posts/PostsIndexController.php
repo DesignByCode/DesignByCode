@@ -1,20 +1,20 @@
 <?php
 
-    namespace App\Http\Controllers\Posts;
+    namespace App\Http\Controllers\Sheets\Posts;
 
     use App\Http\Controllers\Controller;
-    use App\Models\Post;
     use Illuminate\View\View;
+    use Spatie\Sheets\Facades\Sheets;
 
     class PostsIndexController extends Controller
     {
         /**
          * Handle the incoming request.
          */
-        public function __invoke(Post $posts): View
+        public function __invoke(): View
         {
             return view('posts.index', [
-                'posts' => $posts->with('user')->paginate(10)
+                'posts' => Sheets::collection('posts')->all()->sortByDesc('date')
             ]);
         }
     }

@@ -116,4 +116,10 @@
                 ['contents' => new HtmlString($htmlContents)]
             );
         }
+
+        public function convert(string $body)
+        {
+            return $this->commonMarkConverter->convert($body)->getContent();
+        }
+
     }

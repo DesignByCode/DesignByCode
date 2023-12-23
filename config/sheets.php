@@ -14,6 +14,13 @@
                 'content_parser' => MarkdownWithFrontMatterParser::class,
                 'extension' => 'md',
             ],
+            'posts' => [
+                'disk' => 'posts',
+                'sheet_class' => App\Sheets\Post::class,
+                'path_parser' => Spatie\Sheets\PathParsers\SlugWithDateParser::class,
+                'content_parser' => MarkdownWithFrontMatterParser::class,
+                'extension' => 'md',
+            ],
 
 
             /* An example collection. All keys are optional.

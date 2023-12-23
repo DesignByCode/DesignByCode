@@ -3,21 +3,21 @@
     use App\Http\Controllers\Frontend\HomePageController;
     use App\Http\Controllers\Patterns\PatternsIndexController;
     use App\Http\Controllers\PatternsShowController;
-    use App\Http\Controllers\Posts\PostPageController;
-    use App\Http\Controllers\Posts\PostsIndexController;
     use App\Http\Controllers\ProfileController;
-    use App\Http\Controllers\Sheets\SheetPackageIndexController;
-    use App\Http\Controllers\Sheets\SheetPackageShowController;
+    use App\Http\Controllers\Sheets\Package\PackageIndexController;
+    use App\Http\Controllers\Sheets\Package\PackageShowController;
+    use App\Http\Controllers\Sheets\Posts\PostShowController;
+    use App\Http\Controllers\Sheets\Posts\PostsIndexController;
     use Illuminate\Support\Facades\Route;
 
 
     Route::get("/", HomePageController::class)->name("home");
-    Route::get("/open-source/npm", SheetPackageIndexController::class)->name("packages.index");
-    Route::get("/open-source/npm/{package}", SheetPackageShowController::class)->name("packages.show");
+    Route::get("/open-source/npm", PackageIndexController::class)->name("packages.index");
+    Route::get("/open-source/npm/{package}", PackageShowController::class)->name("packages.show");
     Route::get("/open-source/patterns", PatternsIndexController::class)->name("patterns.index");
     Route::get("/open-source/patterns/{pattern:slug}", PatternsShowController::class)->name("patterns.show");
     Route::get('posts', PostsIndexController::class)->name('posts.index');
-    Route::get('posts/{post:slug}', PostPageController::class)->name('posts.show');
+    Route::get('posts/{post:slug}', PostShowController::class)->name('posts.show');
 
 
     //    Route::get("dev-tools", DevToolsIndexController::class)->name("dev-tools.index");

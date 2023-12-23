@@ -53,6 +53,11 @@
                 return $formatter->minify($input);
             });
 
+//            Str::macro('markdown', function (string $input) {
+//                $convert = new CommonMarkConverter();
+//                return $convert->convert($input);
+//            });
+
 
         }
     }
