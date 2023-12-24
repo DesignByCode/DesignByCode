@@ -1,11 +1,11 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-0654833c.css",
+    "file": "assets/app-c652fff2.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/css/markdown.css": {
-    "file": "assets/markdown-192c109d.css",
+    "file": "assets/markdown-2632cdc6.css",
     "isEntry": true,
     "src": "resources/css/markdown.css"
   },
@@ -54,6 +54,10 @@
   "resources/img/blog/blog-1.webp": {
     "file": "assets/blog-1-e86e57a5.webp",
     "src": "resources/img/blog/blog-1.webp"
+  },
+  "resources/img/blog/blog-2.webp": {
+    "file": "assets/blog-2-eee6a872.webp",
+    "src": "resources/img/blog/blog-2.webp"
   },
   "resources/img/customers/CB.svg": {
     "file": "assets/CB-f9ce5193.svg",
