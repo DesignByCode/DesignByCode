@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-27f1c1e1.css",
+    "file": "assets/app-0654833c.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
@@ -50,6 +50,10 @@
   "resources/img/ads/SVG/shopify-logo.svg": {
     "file": "assets/shopify-logo-a8cb9752.svg",
     "src": "resources/img/ads/SVG/shopify-logo.svg"
+  },
+  "resources/img/blog/blog-1.webp": {
+    "file": "assets/blog-1-e86e57a5.webp",
+    "src": "resources/img/blog/blog-1.webp"
   },
   "resources/img/customers/CB.svg": {
     "file": "assets/CB-f9ce5193.svg",
@@ -108,7 +112,7 @@
     "src": "resources/img/tentacles/t6.webp"
   },
   "resources/ts/app.ts": {
-    "file": "assets/app-c6b546d8.js",
+    "file": "assets/app-9fedd548.js",
     "isEntry": true,
     "src": "resources/ts/app.ts"
   }

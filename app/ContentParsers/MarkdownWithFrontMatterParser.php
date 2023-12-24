@@ -13,6 +13,7 @@
     use League\CommonMark\Extension\Embed\Bridge\OscaroteroEmbedAdapter;
     use League\CommonMark\Extension\Footnote\FootnoteExtension;
     use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
+    use League\CommonMark\Extension\Mention\MentionExtension;
     use League\CommonMark\Extension\Strikethrough\StrikethroughExtension;
     use League\CommonMark\Extension\Table\TableExtension;
     use League\CommonMark\Extension\TaskList\TaskListExtension;
@@ -23,6 +24,7 @@
     class MarkdownWithFrontMatterParser implements ContentParser
     {
 
+        public Environment $environment;
         private MarkdownConverter $commonMarkConverter;
 
         public function __construct()
@@ -77,6 +79,18 @@
                     'footnote_class' => 'footnote',
                     'footnote_id_prefix' => 'fn:',
                 ],
+                'mentions' => [
+                    'github_handle' => [
+                        'prefix' => '@',
+                        'pattern' => '[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}(?!\w)',
+                        'generator' => 'https://github.com/%s',
+                    ],
+                    'twitter_handle' => [
+                        'prefix' => '@',
+                        'pattern' => '[A-Za-z0-9_]{1,15}(?!\w)',
+                        'generator' => 'https://twitter.com/%s',
+                    ],
+                ]
             ];
 
             $embedLibrary = new Embed();
@@ -88,21 +102,21 @@
             ]);
 
 
-            $environment = new Environment($config);
-            $environment->addExtension(new CommonMarkCoreExtension());
+            $this->environment = new Environment($config);
+            $this->environment->addExtension(new CommonMarkCoreExtension());
 
-            $environment->addExtension(new AttributesExtension());
-            $environment->addExtension(new AutolinkExtension());
-            $environment->addExtension(new DescriptionListExtension());
-            $environment->addExtension(new DisallowedRawHtmlExtension());
-            $environment->addExtension(new FootnoteExtension());
-            $environment->addExtension(new HeadingPermalinkExtension());
-            $environment->addExtension(new StrikethroughExtension());
-            $environment->addExtension(new TableExtension());
-//            $environment->addExtension(new TableOfContentsExtension());
-            $environment->addExtension(new TaskListExtension());
-
-            $this->commonMarkConverter = new MarkdownConverter($environment);
+            $this->environment->addExtension(new AttributesExtension());
+            $this->environment->addExtension(new AutolinkExtension());
+            $this->environment->addExtension(new DescriptionListExtension());
+            $this->environment->addExtension(new DisallowedRawHtmlExtension());
+            $this->environment->addExtension(new FootnoteExtension());
+            $this->environment->addExtension(new HeadingPermalinkExtension());
+            $this->environment->addExtension(new StrikethroughExtension());
+            $this->environment->addExtension(new TableExtension());
+//            $this->environment->addExtension(new TableOfContentsExtension());
+            $this->environment->addExtension(new TaskListExtension());
+            $this->environment->addExtension(new MentionExtension());
+            $this->commonMarkConverter = new MarkdownConverter($this->environment);
         }
 
         public function parse(string $contents): array
@@ -117,9 +131,5 @@
             );
         }
 
-        public function convert(string $body)
-        {
-            return $this->commonMarkConverter->convert($body)->getContent();
-        }
 
     }

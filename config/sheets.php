@@ -2,6 +2,7 @@
 
 
     use App\ContentParsers\MarkdownWithFrontMatterParser;
+    use App\ContentParsers\PrettyMarkdown;
 
     return [
         'default_collection' => null,
@@ -18,7 +19,7 @@
                 'disk' => 'posts',
                 'sheet_class' => App\Sheets\Post::class,
                 'path_parser' => Spatie\Sheets\PathParsers\SlugWithDateParser::class,
-                'content_parser' => MarkdownWithFrontMatterParser::class,
+                'content_parser' => PrettyMarkdown::class,
                 'extension' => 'md',
             ],
 
