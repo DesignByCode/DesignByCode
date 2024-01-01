@@ -1,5 +1,6 @@
 <?php
 
+    use App\Models\User;
     use Illuminate\Database\Migrations\Migration;
     use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Support\Facades\Schema;
@@ -12,11 +13,13 @@
         {
             Schema::create('posts', function (Blueprint $table) {
                 $table->id();
-                $table->string('title')->index();
-                $table->string('slug')->unique()->index();
+                $table->foreignIdFor(User::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete()->restrictOnDelete();
+                $table->text('title');
+                $table->text('slug');
                 $table->text('excerpt')->nullable();
-                $table->text('body')->nullable();
-                $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+                $table->text('hero')->nullable();
+                $table->longText('body')->nullable();
+                $table->timestamp('live')->nullable()->default(null);
                 $table->timestamps();
             });
         }

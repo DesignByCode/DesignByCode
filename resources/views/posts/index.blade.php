@@ -15,16 +15,16 @@
                                         <circle r="3.5" cx="4.5" cy="4.5" stroke="currentColor" stroke-width="1"/>
                                     </svg>
                                     <h3 class="text-2xl font-semibold tracking-tight pointer-events-none">{{ $post->title }}</h3>
-
-                                    <div class="lg:absolute lg:-left-[190px] text-sm lg:top-0 text-gray-400 italic">{{ $post->date->format('F j\\, Y') }}</div>
+                                    <div class="lg:absolute lg:-left-[190px] text-sm lg:top-0 text-gray-400 italic">{{ $post->created_at->format('F j\\, Y') }}</div>
                                     <div class="text-gray-400 pointer-events-none line-clamp-3">
-                                        {{ $post->teaser }}
+                                        {{ $post->excerpt }}
                                     </div>
-                                    <a href="{{ route('posts.show', $post->slug) }}" class="text-primary-500 z-10 flex items-center  group-hover:underline">Read more
+                                    <a href="{{ route('posts.show', $post) }}" class="text-primary-500 z-10 flex items-center group-hover:underline">Read more
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 ml-0.5">
                                             <path fill-rule="evenodd" d="M6.22 4.22a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06l-3.25 3.25a.75.75 0 0 1-1.06-1.06L8.94 8 6.22 5.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
                                         </svg>
-                                        <span class="absolute -inset-y-4 -left-4 -right-2 -z-10 rounded group-hover:bg-gray-100 dark:group-hover:bg-gray-900"></span></a>
+                                        <span class="absolute -inset-y-4 -left-4 -right-2 z-10 rounded"></span></a>
+                                    <span class="absolute -inset-y-4 -left-4 -right-2 -z-10 rounded group-hover:bg-gray-100 dark:group-hover:bg-gray-900"></span></a>
                                 </div>
                             </div>
                         @endforeach

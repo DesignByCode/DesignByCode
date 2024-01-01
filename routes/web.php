@@ -3,11 +3,10 @@
     use App\Http\Controllers\Frontend\HomePageController;
     use App\Http\Controllers\Patterns\PatternsIndexController;
     use App\Http\Controllers\PatternsShowController;
+    use App\Http\Controllers\PostController;
     use App\Http\Controllers\ProfileController;
     use App\Http\Controllers\Sheets\Package\PackageIndexController;
     use App\Http\Controllers\Sheets\Package\PackageShowController;
-    use App\Http\Controllers\Sheets\Posts\PostShowController;
-    use App\Http\Controllers\Sheets\Posts\PostsIndexController;
     use Illuminate\Support\Facades\Route;
 
 
@@ -16,8 +15,12 @@
     Route::get("/open-source/npm/{package}", PackageShowController::class)->name("packages.show");
     Route::get("/open-source/patterns", PatternsIndexController::class)->name("patterns.index");
     Route::get("/open-source/patterns/{pattern:slug}", PatternsShowController::class)->name("patterns.show");
-    Route::get('posts', PostsIndexController::class)->name('posts.index');
-    Route::get('posts/{post:slug}', PostShowController::class)->name('posts.show');
+
+    Route::get('posts', [PostController::class, 'index'])->name('posts.index');
+    Route::get('/posts/{post:slug}', [PostController::class, 'show'])->name('posts.show');
+
+//    Route::get('posts', PostsIndexController::class)->name('posts.index');
+//    Route::get('posts/{post:slug}', PostShowController::class)->name('posts.show');
 
 
     //    Route::get("dev-tools", DevToolsIndexController::class)->name("dev-tools.index");

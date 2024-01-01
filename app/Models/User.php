@@ -3,7 +3,9 @@
     namespace App\Models;
 
     // use Illuminate\Contracts\Auth\MustVerifyEmail;
+    use Illuminate\Database\Eloquent\Casts\Attribute;
     use Illuminate\Database\Eloquent\Factories\HasFactory;
+    use Illuminate\Database\Eloquent\Relations\HasMany;
     use Illuminate\Foundation\Auth\User as Authenticatable;
     use Illuminate\Notifications\Notifiable;
     use Laravel\Sanctum\HasApiTokens;
@@ -42,6 +44,29 @@
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+
+        /**
+         * @return HasMany
+         */
+        public function posts(): HasMany
+        {
+            return $this->hasMany(Post::class);
+        }
+
+        public function image(): Attribute
+        {
+            return Attribute::get(fn() => $this->gravatar($this->email));
+        }
+
+        public function gravatar($email, $default = 'mp', $size = 40): string
+        {
+            return "https://www.gravatar.com/avatar/" . md5(strtolower(trim($email))) . "?d=" . urlencode($default) . "&s=" . $size;
+        }
+
+        public function uiavatar(): string
+        {
+            return "https://ui-avatars.com/api/?background=random&name=" . $this->name;
+        }
 
 
     }
