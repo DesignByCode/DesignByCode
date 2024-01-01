@@ -62,8 +62,10 @@ Colocation hosting involves renting space in a data center to house your physica
 The perfect web hosting solution depends on various factors, including website traffic, technical requirements, scalability needs, and budget constraints. Evaluating these factors is crucial to finding the hosting type
 that best aligns with your website's goals and growth trajectory.
 ",
-                    'live' => Carbon::now(),
-                    'user_id' => 1
+                    'live' => Carbon::create(2023, 12, 23, 12, 00, 00),
+                    'user_id' => 1,
+                    'created_at' => Carbon::create(2023, 12, 23, 12, 00, 00),
+                    'updated_at' => Carbon::create(2023, 12, 23, 12, 00, 00)
                 ],
                 [
                     'title' => 'Navigating eCommerce Realms - Unveiling Self-Hosting vs. Hosted Solutions',
@@ -115,8 +117,10 @@ customization, hosted solutions offer simplicity and ease of use.
 In conclusion, both self-hosting and hosted solutions have their advantages, and the choice ultimately depends on the unique needs and priorities of the business. Whether opting for complete control or convenience, selecting the right
 eCommerce platform lays the foundation for a successful online business venture.
 ",
-                    'live' => Carbon::now(),
-                    'user_id' => 1
+                    'live' => Carbon::create(2023, 12, 22, 12, 00, 00),
+                    'user_id' => 1,
+                    'created_at' => Carbon::create(2023, 12, 22, 12, 00, 00),
+                    'updated_at' => Carbon::create(2023, 12, 22, 12, 00, 00)
                 ],
             ];
 
