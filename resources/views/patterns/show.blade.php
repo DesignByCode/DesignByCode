@@ -6,14 +6,17 @@
         <h1 class="heading-1 ">
             {{ $pattern->name }} patterns
         </h1>
-        <button type="button" is="headless-goback" class="inline-flex bg-primary-100 text-primary-500 hover:opacity-80 dark:bg-gray-900 items-center justify-start space-x-2 my-4 border border-primary-500 rounded-md px-3 py-2 font-bold">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"/>
-            </svg>
-            <span>
+        <div class="w-full">
+            <button type="button" is="headless-goback" class="inline-flex bg-primary-100 text-primary-500 hover:opacity-80 dark:bg-gray-900 items-center justify-start space-x-2 my-4 border border-primary-500 rounded-md px-3 py-2 font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"/>
+                </svg>
+                <span>
             Go back
             </span>
-        </button>
+            </button>
+
+        </div>
 
         <div class="grid grid-cols-6 my-6 gap-6 relative">
             <div class="col-span-6 md:col-span-4">

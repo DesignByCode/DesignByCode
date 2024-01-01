@@ -25,6 +25,21 @@
                     "snippet" => '<svg id="dbc-svg-[random]" class="dbc-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="dbc-pattern-[random]" patternUnits="userSpaceOnUse" width="50" height="50" y="-42" x="-2" patternTransform="rotate(55) skewX(0) scale(1)"><rect transform="skewX(28)" x="-22" y="-1" rx="10" width="50" height="50" stroke-width="1.5" stroke="currentColor" fill="none"/></pattern></defs><rect width="100%" height="100%" fill="url(#dbc-pattern-[random])"/></svg>'
                 ],
                 [
+                    "name" => "Horizontal Lines",
+                    "premium" => false,
+                    "snippet" => '<svg id="dbc-svg-[random]" class="dbc-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="dbc-pattern-[random]" width="4" height="18" patternTransform="rotate(0) skewX(0) scale(1)" patternUnits="userSpaceOnUse"><path stroke="currentColor" fill="none" stroke-width="1.5" d="M-1 2h6"/></pattern></defs><rect width="100%" height="100%" x="1" y="1" fill="url(#dbc-pattern-[random])"/></svg>'
+                ],
+                [
+                    "name" => "Vertical Lines",
+                    "premium" => false,
+                    "snippet" => '<svg id="dbc-svg-[random]" class="dbc-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="dbc-pattern-[random]" width="4" height="18" patternTransform="rotate(90) skewX(0) scale(1)" patternUnits="userSpaceOnUse"><path stroke="currentColor" fill="none" stroke-width="1.5" d="M-1 2h6"/></pattern></defs><rect width="100%" height="100%" x="1" y="1" fill="url(#dbc-pattern-[random])"/></svg>'
+                ],
+                [
+                    "name" => "Diagonal Lines",
+                    "premium" => false,
+                    "snippet" => '<svg id="dbc-svg-[random]" class="dbc-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="dbc-pattern-[random]" width="4" height="18" patternTransform="rotate(45) skewX(0) scale(1)" patternUnits="userSpaceOnUse"><path stroke="currentColor" fill="none" stroke-width="1.5" d="M-1 2h6"/></pattern></defs><rect width="100%" height="100%" x="1" y="1" fill="url(#dbc-pattern-[random])"/></svg>'
+                ],
+                [
                     "name" => "Square grid",
                     "premium" => false,
                     "snippet" => '<svg id="dbc-svg-[random]" class="dbc-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><pattern id="dbc-pattern-[random]" width="50" height="50" x="0" y="0" patternTransform="rotate(0) skewX(0) scale(1)" patternUnits="userSpaceOnUse"><rect width="50" height="50" fill="none" stroke="currentColor" stroke-width="1.5" rx="0"/><rect width="30" height="30" x="10" y="10" fill="none" stroke="currentColor" stroke-width="1.5" rx="0"/></pattern></defs><rect width="100%" height="100%" fill="url(#dbc-pattern-[random])"/></svg>'
