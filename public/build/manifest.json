@@ -79,6 +79,14 @@
     "file": "assets/claude-feb66190.webp",
     "src": "resources/img/profile/claude.webp"
   },
+  "resources/img/svg/laravel.svg": {
+    "file": "assets/laravel-3920e88b.svg",
+    "src": "resources/img/svg/laravel.svg"
+  },
+  "resources/img/svg/php.svg": {
+    "file": "assets/php-e52c42fa.svg",
+    "src": "resources/img/svg/php.svg"
+  },
   "resources/img/svg/postcss.svg": {
     "file": "assets/postcss-84d2b74a.svg",
     "src": "resources/img/svg/postcss.svg"

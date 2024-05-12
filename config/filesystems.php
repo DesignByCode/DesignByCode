@@ -37,6 +37,12 @@
                 'throw' => false,
             ],
 
+            'packagist' => [
+                'driver' => 'local',
+                'root' => storage_path('app/packagist'),
+                'throw' => false,
+            ],
+
             'posts' => [
                 'driver' => 'local',
                 'root' => storage_path('app/posts'),

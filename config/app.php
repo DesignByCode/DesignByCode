@@ -169,6 +169,7 @@
             App\Providers\EventServiceProvider::class,
             App\Providers\RouteServiceProvider::class,
             App\Providers\SheetPackageServiceProvider::class,
+            App\Providers\SheetPackagistServiceProvider::class,
 //            App\Providers\SheetPostServiceProvider::class,
 
 

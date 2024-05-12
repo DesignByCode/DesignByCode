@@ -5,14 +5,22 @@
     use App\Http\Controllers\PatternsShowController;
     use App\Http\Controllers\PostController;
     use App\Http\Controllers\ProfileController;
-    use App\Http\Controllers\Sheets\Package\PackageIndexController;
-    use App\Http\Controllers\Sheets\Package\PackageShowController;
+    use App\Http\Controllers\Sheets\Package\{PackageIndexController, PackageShowController};
+    use App\Http\Controllers\Sheets\Packagist\PackagistIndexController;
+    use App\Http\Controllers\Sheets\Packagist\PackagistShowController;
     use Illuminate\Support\Facades\Route;
 
 
     Route::get("/", HomePageController::class)->name("home");
+
     Route::get("/open-source/npm", PackageIndexController::class)->name("packages.index");
     Route::get("/open-source/npm/{package}", PackageShowController::class)->name("packages.show");
+
+
+    Route::get("/open-source/packagist", PackagistIndexController::class)->name("packagist.index");
+    Route::get("/open-source/packagist/{packagist}", PackagistShowController::class)->name("packagist.show");
+
+
     Route::get("/open-source/patterns", PatternsIndexController::class)->name("patterns.index");
     Route::get("/open-source/patterns/{pattern:slug}", PatternsShowController::class)->name("patterns.show");
 

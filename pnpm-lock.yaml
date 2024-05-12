@@ -8,6 +8,9 @@ dependencies:
   '@designbycode/traverse':
     specifier: ^1.0.1
     version: 1.0.1
+  designbycode:
+    specifier: 'link:'
+    version: 'link:'
   gsap:
     specifier: ^3.12.5
     version: 3.12.5
